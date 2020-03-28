@@ -1,0 +1,300 @@
+ 
+ Referencing version J.9
+ 
+ Logging on at 06:27:00 on 01-APR-2019
+*******************************************************************************
+            PACER J9 ASP NETWORK SERVICES  ---  SS&C TECHNOLOGIES 
+ 
+            This system is restricted to authorized users only. 
+ 
+            Unauthorized access is strictly prohibited. 
+*******************************************************************************
+ Please be advised of the maintenance schedule for SS&C systems below. 
+ SS&C systems will not be available on the following calendar dates, during the 
+ approximate hours mentioned: 
+ 
+                      Upcoming Maintenance Schedule 
+ 
+                              ---- 2019 ---- 
+        Jan 19     Feb  9     Mar 23     Apr 13     May 11     Jun 15
+        Jul 13     Aug 17     Sep 14     Oct 19     Nov 16     Dec  7
+ 
+ All dates fall on Saturdays. Scheduled maintenance typically runs from 06:00am
+ to 06:00pm Eastern Time.
+******************************************************************************                               
+SVC Advisory: CIBC WM 3PM pricing delay for Tuesday March 5, 2019 Final Update- 
+Prices Loaded
+ 
+Please be advised that we have now received and loaded all CIBC WM pricing.  
+ 
+The GLOBAL ASP database is now also updated and global price source codes 
+WG2/WG6 now have pricing available.
+ 
+Any Global jobs which reference these price source codes should be re-run if 
+they completed prior to 9:30 pm EST.
+ 
+We apologize for any inconvenience this may have caused.
+ 
+Regards,
+ 
+                                        March 5th, 2019 9:30 pm est
+*******************************************************************************
+SVC Advisory - Production Schedule Impact of Daylight Saving Time
+ 
+Canada and the United States will begin Daylight Saving Time at 2:00 am Sunday 
+March 10, 2019.
+ 
+Due to the time change differences, some vendor files received by SVC for 
+Non-North American markets will be delayed by 1 hour. Namely the Far East and 
+European Markets. Any clients receiving Non-North American data from SVC should 
+be advised that the potential exists for client files to be delayed by 1 hour 
+between the dates of March 10, 2019 and March 31, 2019.  WM Reuters FX rates 
+will also be delayed by 1 hour during this period.  
+ 
+Normal file processing times will resume effective April 1, 2019.
+ 
+Clients are asked to contact their SVC account representative directly or call 
+905-629-8000 and ask to speak with an SVC support representative for further 
+details and to discuss direct file timing impact.
+ 
+Regards,
+SVC Client Support
+SVC-ClientSupport@sscinc.com
+ 
+                                          March 6th, 2019 3:55 pm EST
+*******************************************************************************
+ 
+SVC Advisory: CIBC Wood Gundy 6pm prices delay           
+ 
+Please be advised that SVC has not received the CIBC 6PM prices from our vendor
+CIBC Wood Gundy. Sources affected are WG6,WS6,WV6,WR6,WI6. 
+ 
+There is currently no ETA. We will provide updates as they come available.
+ 
+Regards,
+SVC Client Support
+SVC-ClientSupport@sscinc.com
+                                              March 12th, 2019 8:00 pm EST    
+*******************************************************************************
+SVC Advisory: CIBC Wood Gundy 6pm prices delay - Update  
+ 
+Please be advised that SVC received the CIBC 6PM prices at 8.40 PM from our 
+vendor and all files have now been processed.
+ 
+Please contact your SVC support representative should you have any questions.
+ 
+Regards,
+SVC Client Support
+SVC-ClientSupport@sscinc.com
+                                              March 12th, 2019 8:43 pm EST    
+*******************************************************************************
+                        Section 31 Fee Update
+ 
+ As announced by the Securities and Exchange Commission on March 12, 2019,
+ effective April 16, 2019 the Section 31 fee rate (SEC fee) will increase from 
+ the current rate of $13.00 per million to $20.70 per million dollars.
+ 
+ SS&C has implemented this change to apply to system calculated SEC fees for 
+ Settlement dates effective April 16, 2019.
+                                               March 14, 2019 10:40am EST 
+*******************************************************************************
+SVC Advisory: CIBC Wood Gundy 6pm prices delay           
+ 
+Please be advised that SVC has not received the CIBC 6PM prices from our vendor
+CIBC Wood Gundy. Sources affected are WG6,WS6,WV6,WR6,WI6. 
+ 
+Current ETA is 30 to 45 minutes. We will provide updates as they come available.
+ 
+Regards,
+SVC Client Support
+SVC-ClientSupport@sscinc.com
+                                              March 28th, 2019 7:25pm EST    
+*******************************************************************************
+SVC Advisory: CIBC Wood Gundy 6pm prices delay - UPDATE           
+ 
+Please be advised that SVC has now received the CIBC 6PM prices from our vendor
+CIBC Wood Gundy. 
+ 
+Regards,
+SVC Client Support
+SVC-ClientSupport@sscinc.com
+                                              March 28th, 2019 8:30pm EST    
+*******************************************************************************
+ 
+ CMD> BATCH
+ 
+ BATCH> SUBMIT
+ 
+ 
+ 
+ Enter job name [,RES] or (LIST,STOP) ? RESUBMIT
+ 
+ Enter start date or (HELP,STOP) ? TOM
+ 
+ Enter start time or (HELP,STOP) ? 06:27
+ 
+ Enter queue name or (HELP,STOP) ? Z
+ 
+ Enter project ID or press return for blank ? SSISSBAR
+ 
+ Verify input:
+ 
+ Job name:   SSISSBA
+ Start date: 190402   Start time: 06:27:00   Queue: Z
+ Operator:   FMC      Project ID: SSISSBAR
+ 
+ Okay to submit (Y,N) ? YES
+ 
+ Job SSISSBA successfully submitted.
+ 
+ REQUEST PROCESSED
+ 
+ 
+ BATCH> STOP
+ 
+ CMD> !
+ 
+ CMD> !**BACKER REPORT
+ 
+ CMD> PACER
+ 
+ PACER> SBAR
+ 
+ 
+ 
+ ENTER BACKER CODE(S), FOLLOWED BY "END" OR  (ALL,HEL,STO) ? ALL                    !BACKER CODE RANGE
+ 
+ ENTER SORT KEY (CODE,NAME) OR (HEL,STO) ? CODE                   !SORT KEY
+ 
+ ENTER MODIFIERS (LIN,LAN,RLN,NON,HEL,STO) ? NON                    !MODIFIERS
+ 
+   BACKER REPORT   PAGE: 1
+ 
+  BACKER         SHORT
+   CODE           NAME
+ 
+ -------- --------------------
+ 1001     AG BARR
+ 1002     ABERFORTH FUNDS
+ 1003     AMBER GROUP
+ 1004     AMCOR LIMITED
+ 1005     AN PHU IRRADIATION
+ 1006     ARLINGTON FUNDS
+ 1007     ASIA ALT FUNDS
+ 1008     ATLAS COPCO
+ 1009     AXIOM ASIA FUNDS
+ 1010     BOWERS & WILKINS
+ 1011     BRISTOW GROUP
+ 1012     CALEDONIA NL
+ 1013     CAPITAL TODAY CHINA
+ 1014     CASPIAN
+ 1015     CAZENOVE GROUP
+ 1016     CBPE LP FUNDS
+ 1017     CHOICE CARE GROUP
+ 1018     COBEHOLD
+ 1019     CONOCOPHILLIPS
+ 1020     EASYBOX
+ 1021     EDDINGTON CAP FUNDS
+ 1022     EDINMORE GROUP
+ 1023     EDINMORE INVMTS
+ 1024     ERMITAGE
+ 1025     ERMITAGE FUNDS
+ 1026     ESPRIT CAP FUNDS
+ 1027     ABERDEEN FUNDS
+ 1028     FTSE OPTIONS
+ 1029     GARLANDHEATH
+ 1030     GENERAL PRACTICE
+ 1031     GREENHILL CAP FUNDS
+ 1032     HAGL
+ 1033     HARRY RAMSDEN
+ 1034     ICAP
+ 1035     INCISIVE MEDIA
+ 1036     INDIA CAPITAL GROWTH
+ 1037     INTERCORR
+ 1038     LIVINGBRIDGE FUNDS
+ 1039     JF LEHMAN FUNDS
+ 1040     KERZNER INTL LTD
+ 1041     KINGDOM GROUP
+ 1042     K-REIT ASIA
+ 1043     LATSHAW GROUP
+ 1044     LONGLEAF MGMT FUNDS
+ 1045     MACQ ASIA NEW STARS
+ 1046     MELROSE RESOURCES
+ 1047     MSPEA FUNDS
+ 1048     MTI GLOBAL INC
+ 1049     NEWTON ASIAN FUND
+ 1050     NOVA CALEDONIA
+ 1051     NOVA CAP FUNDS
+ 1052     NOVA SPRINGBOARD
+ 1053     NOVAE GROUP
+ 1054     OCEAN DIAL GROUP
+ 1055     OCEAN DIAL GW INDIA
+ 1056     PARK HOLIDAYS
+ 1057     PERLUS MICROCAP
+ 1058     POLAR CAPITAL FUNDS
+ 1059     PRAGMA FUNDS
+ 1060     REDLEAF PPTY FUNDS
+ 
+   BACKER REPORT   PAGE: 2
+ 
+  BACKER         SHORT
+   CODE           NAME
+ 
+ -------- --------------------
+ 1061     RETIF
+ 1062     ROLLS-ROYCE HLDGS
+ 1063     SAIGON TEL
+ 1064     SKYNET TELEMTCS INC
+ 1065     SLOANE CLUB
+ 1066     SPIRAX-SARCO ENGR
+ 1067     STARWOOD PPTY TR
+ 1068     TERRACE HILL GROUP
+ 1069     TGE MARINE AG
+ 1070     SEVEN INV MGMT
+ 1071     STERLING INDUSTRIES
+ 1072     GALA BINGO
+ 1073     CENTEROAK FUNDS
+ 1074     DECHENG CAPITAL
+ 1075     NEXXTDRIVE
+ 1076     NTASIAN FUNDS
+ 1077     STONEPEAK FUNDS
+ 1078     VISION KNIGHT FUNDS
+ 1079     LIBERATION GROUP
+ 1080     LONDONMETRIC PROP
+ 1081     DEWAN HOUSING FIN
+ 1082     STD LIFE ABERDEEN
+ 1083     BOOKER GROUP
+ 1084     BOOTS GROUP
+ 1085     BP PLC
+ 1086     CAIRN ENERGY PLC
+ 1087     CASPIAN
+ 1088     EASYBOX
+ 1089     GALA BINGO
+ 1090     GLAXOSMITHKLINE
+ 1091     HARRY RAMSDEN
+ 1092     LAND SECURITIES GP
+ 1093     NOVA SPRINGBOARD
+ 1094     REED ELSEVIER
+ 1095     RIO TINTO
+ 1096     TELENOR ASA
+ 1097     UNILEVER PLC
+ 1098     OCEONICS
+ 1099     COOKE OPTICS
+ 1100     PHOENIX GROUP HOLD
+ 1101     BIOAGILYTIX
+ 9999     CASH ETC
+ 
+ REQUEST PROCESSED
+ 
+ 
+ PACER> STOP
+ 
+ CMD> STOP
+ 
+ CMD> BYE
+ 
+ Job SSISSBA for operator FMC in unit SSC508 completed at 06:27:00 on 01APR19
+ 
+ Elapsed time:   0 00:00:00.53
+ 
+  SSC508       job terminated at  1-APR-2019 01:27:00.72

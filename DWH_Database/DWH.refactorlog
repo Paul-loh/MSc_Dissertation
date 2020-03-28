@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="5d05b694-e033-4146-aa52-5c45b133b98b" ChangeDateTime="07/29/2019 15:48:21">
+    <Property Name="ElementName" Value="[dbo].[Fact_Valuation_Summary].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Fact_Valuation_Summary]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Date" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a985d287-bbdf-43ac-85a8-60c74accc6e8" ChangeDateTime="07/29/2019 15:48:27">
+    <Property Name="ElementName" Value="[dbo].[Fact_Valuation_Summary].[Date]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Fact_Valuation_Summary]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ValuationDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4432dedd-bf64-402b-b6fe-a272a74c9982" ChangeDateTime="07/29/2019 15:53:04">
+    <Property Name="ElementName" Value="[dbo].[Dim_Currency].[ISOCurrencyCode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Dim_Currency]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ISOCurrencyCode3Char" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="996e8e21-ff68-4fc6-bd3d-c67fb54af61f" ChangeDateTime="07/29/2019 15:55:03">
+    <Property Name="ElementName" Value="[dbo].[Fact_Valuation_Summary].[CapitalGain]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Fact_Valuation_Summary]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CapitalGainLC" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="153e1515-6bbd-4c8b-a953-e0b0ba1203ce" ChangeDateTime="07/29/2019 15:55:06">
+    <Property Name="ElementName" Value="[dbo].[Fact_Valuation_Summary].[Valuation]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Fact_Valuation_Summary]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ValuationLC" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="76302231-3e0e-4a45-88b9-19732b3a1ca6" ChangeDateTime="08/06/2019 16:19:58">
+    <Property Name="ElementName" Value="[tmp].[Currencies].[BatchID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[tmp].[Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_BatchID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d61486a0-0aea-426f-9598-6f0134bbef8d" ChangeDateTime="08/06/2019 16:20:24">
+    <Property Name="ElementName" Value="[ods].[Currencies].[BatchImportID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ods].[Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_BatchImportID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ebdb61bd-a1f0-4d13-bce3-5caf97b4fdb4" ChangeDateTime="08/06/2019 16:20:26">
+    <Property Name="ElementName" Value="[ods].[Currencies].[RowVersionNo]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ods].[Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_RowVersionNo" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0d63e4cc-d103-4fde-adb3-9160e33f014a" ChangeDateTime="08/06/2019 16:20:42">
+    <Property Name="ElementName" Value="[ods].[Securities].[BatchImportID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ods].[Securities]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_BatchImportID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fa5c2895-77bc-4b52-8455-461b9f356bf0" ChangeDateTime="08/06/2019 16:20:45">
+    <Property Name="ElementName" Value="[ods].[Securities].[RowVersionNo]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ods].[Securities]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_RowVersionNo" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5ceaf5b5-ce30-4582-9fd6-365f7b48ccd8" ChangeDateTime="08/06/2019 16:20:52">
+    <Property Name="ElementName" Value="[ods].[Securities].[SourceExportDateTime]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ods].[Securities]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_SourceExportDateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="34f73dd9-8083-435b-b8e9-ac4c8ff0738d" ChangeDateTime="08/06/2019 16:21:02">
+    <Property Name="ElementName" Value="[ods].[Securities].[Meta_SourceExportDateTime]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ods].[Securities]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_SourceSysExportDateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="65d1642e-278a-4441-b95d-8d6ddcae998d" ChangeDateTime="08/06/2019 16:21:06">
+    <Property Name="ElementName" Value="[ods].[Securities].[ImportDateTime]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ods].[Securities]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_ImportDateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d74e7bff-b5b4-43be-9522-02e1d1fa80a6" ChangeDateTime="08/06/2019 16:21:22">
+    <Property Name="ElementName" Value="[ods].[Securities].[Active]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ods].[Securities]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_Active" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e0e4ec92-d6b3-498c-9f31-77416fc604a4" ChangeDateTime="08/07/2019 11:07:31">
+    <Property Name="ElementName" Value="[ods].[Securities].[UpdatedAt]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ods].[Securities]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_IUpdatedAt" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3f568998-8872-49dc-a293-1fc3e7757db6" ChangeDateTime="08/07/2019 11:07:34">
+    <Property Name="ElementName" Value="[ods].[Securities].[Meta_IUpdatedAt]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ods].[Securities]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_UpdatedAt" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a4271416-ef36-4513-96d2-8ce7b54b4e73" ChangeDateTime="08/07/2019 11:08:01">
+    <Property Name="ElementName" Value="[ods].[Currencies].[UpdatedAt]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ods].[Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_UpdateDateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="01986b82-975c-4974-937e-1be2f9ace39a" ChangeDateTime="08/07/2019 11:08:15">
+    <Property Name="ElementName" Value="[ods].[Securities].[Meta_UpdatedAt]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ods].[Securities]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_UpdateDateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5287854c-d454-4b95-b768-5b9eaef51090" ChangeDateTime="08/07/2019 11:08:28">
+    <Property Name="ElementName" Value="[ods].[FXRates].[ImportDateTime]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ods].[FXRates]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_UpdateDateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b21dcf39-f2d0-4b30-b3bc-9deb46f40479" ChangeDateTime="08/07/2019 11:10:57">
+    <Property Name="ElementName" Value="[stg].[Securities].[UpdatedAt]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[Securities]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_ImportDateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ee21e81f-9edb-4098-9d70-ed6c24b01860" ChangeDateTime="08/07/2019 11:11:10">
+    <Property Name="ElementName" Value="[stg].[Securities].[Meta_ImportDateTime]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[Securities]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_UpdateDateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f0ce7f5c-429c-402e-b991-dea9bcd90474" ChangeDateTime="08/07/2019 11:11:19">
+    <Property Name="ElementName" Value="[stg].[Currencies].[UpdatedAt]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_UpdateDateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="199c13b9-b885-4598-81d3-6e3de94ccba0" ChangeDateTime="08/19/2019 09:32:03">
+    <Property Name="ElementName" Value="[stg].[PACER_Currencies].[CurrencyCode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_CurrencyCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="089125cf-7b01-4b90-a529-396f505cc2fc" ChangeDateTime="08/19/2019 09:32:06">
+    <Property Name="ElementName" Value="[stg].[PACER_Currencies].[CurrencyName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_CurrencyName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="22340c04-e29e-4ec0-8b66-490adcdacbf7" ChangeDateTime="08/19/2019 09:32:08">
+    <Property Name="ElementName" Value="[stg].[PACER_Currencies].[SSCCode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_SSCCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="373d8183-00d4-4b21-9e8b-573a71fe100e" ChangeDateTime="08/19/2019 09:32:13">
+    <Property Name="ElementName" Value="[stg].[PACER_Currencies].[CurrencyGroup]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_CurrencyGroup" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="caa24e5c-c813-4e12-a55f-b6d3b1c787fc" ChangeDateTime="08/19/2019 09:32:49">
+    <Property Name="ElementName" Value="[stg].[PACER_Currencies].[Meta_BatchImportID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_ETL_Process_ImportID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fa6ddaf1-1725-4ed4-9646-df0723d1046a" ChangeDateTime="08/19/2019 09:34:51">
+    <Property Name="ElementName" Value="[tmp].[PACER_Currencies].[Meta_BatchImportID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[tmp].[PACER_Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_ETLProcessID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="af1d1a48-2a57-4c0f-9e61-ac3b4ec7f2cc" ChangeDateTime="08/19/2019 09:41:14">
+    <Property Name="ElementName" Value="[audit].[Package].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[audit].[Package]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ETLPackageID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b92aef78-0b20-40d1-8262-99ed7dfb74d4" ChangeDateTime="08/19/2019 09:41:20">
+    <Property Name="ElementName" Value="[audit].[Package].[Package]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[audit].[Package]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ETLPackageName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3c76b351-fe77-418d-9290-26cd147ab159" ChangeDateTime="08/19/2019 09:41:30">
+    <Property Name="ElementName" Value="[audit].[Package].[BatchId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[audit].[Package]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ETLProcessID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4eb54df4-a2e4-47d1-a408-273fbc3cd478" ChangeDateTime="09/03/2019 10:33:11">
+    <Property Name="ElementName" Value="[stg].[PACER_Currencies].[Out_HaskKey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_HashKey" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7e110af6-3be6-47c7-938f-e36e38fda439" ChangeDateTime="09/03/2019 10:33:19">
+    <Property Name="ElementName" Value="[stg].[PACER_FXRates].[Out_HaskKey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_FXRates]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_HashKey" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5b099ab2-00d6-4932-a70f-f471d69eb4e1" ChangeDateTime="09/03/2019 10:33:25">
+    <Property Name="ElementName" Value="[stg].[PACER_Prices].[Out_HaskKey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Prices]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_HashKey" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3f996a68-647a-4cb6-a429-cfc6849da7c2" ChangeDateTime="09/03/2019 10:33:33">
+    <Property Name="ElementName" Value="[stg].[PACER_Securities].[Out_HaskKey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Securities]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_HashKey" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="91fde94c-182b-4de9-9876-b5a1b9ebe63e" ChangeDateTime="09/03/2019 10:33:42">
+    <Property Name="ElementName" Value="[stg].[PACER_Transactions].[Out_HaskKey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Transactions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_HashKey" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="19ee47a2-23d5-4619-957f-f0614880e8de" ChangeDateTime="09/04/2019 10:16:53">
+    <Property Name="ElementName" Value="[dv].[HubCurrencies].[Meta_ImportDateTime]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[HubCurrencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_LoadDateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="26db720d-ccad-40df-9aec-b838ffcb70a8" ChangeDateTime="09/04/2019 10:22:16">
+    <Property Name="ElementName" Value="[dv].[SatCurrencies].[CurrenciesHashKey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[SatCurrencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CurrencyHashKey" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="99e25b9e-ec06-4dd0-8e2e-3f81681f91f2" ChangeDateTime="09/04/2019 10:22:22">
+    <Property Name="ElementName" Value="[dv].[HubCurrencies].[CurrenciesHashKey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[HubCurrencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CurrencyHashKey" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1d384706-ca75-4f1b-9ea0-89dc8736e100" ChangeDateTime="09/06/2019 10:49:27">
+    <Property Name="ElementName" Value="[stg].[PACER_Currencies].[Out_CurrencyCodeBK]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_CcyCodeBK" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1cb844fa-8fe3-4ef6-9512-f86bafde0b06" ChangeDateTime="09/06/2019 11:15:49">
+    <Property Name="ElementName" Value="[stg].[PACER_Valuations].[Out_PortfolioCodeBK]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Valuations]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_PORTCDBK" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a68705a2-c4f6-4ae0-b0e3-f2620cb0cbd8" ChangeDateTime="09/06/2019 11:15:58">
+    <Property Name="ElementName" Value="[stg].[PACER_Valuations].[Out_ValuationDateBK]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Valuations]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_VALDATEBK" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f2a94342-1171-43ee-9398-2785b2218348" ChangeDateTime="09/06/2019 11:16:04">
+    <Property Name="ElementName" Value="[stg].[PACER_Valuations].[Out_SecurityCodeBK]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Valuations]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_SECIDBK" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2179c714-27fb-4227-a42c-08d359868000" ChangeDateTime="09/06/2019 11:16:13">
+    <Property Name="ElementName" Value="[stg].[PACER_Valuations].[Out_PriceCcyBK]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Valuations]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_BOKFXCBK" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f65e4607-2910-4f29-9f64-a75b3e80f40f" ChangeDateTime="09/06/2019 11:16:37">
+    <Property Name="ElementName" Value="[stg].[PACER_Valuations].[Out_Holding]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Valuations]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_HOLDINGS" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9b3123b3-9465-4815-b857-c1db6ab88808" ChangeDateTime="09/09/2019 08:08:40">
+    <Property Name="ElementName" Value="[stg].[PACER_Currencies].[Out_BKHashKey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_Hash" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f8709596-1675-41ff-8c7f-ae093c895058" ChangeDateTime="09/09/2019 08:09:35">
+    <Property Name="ElementName" Value="[stg].[PACER_Currencies].[Out_Hash]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_HashHubCurrencies" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c24326d9-6479-494a-803f-ed04431e4ecc" ChangeDateTime="09/09/2019 08:09:52">
+    <Property Name="ElementName" Value="[dv].[HubCurrencies].[CurrencyHashKey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[HubCurrencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Hash" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6b1667ec-f8d6-439d-aded-04cad38715d5" ChangeDateTime="09/09/2019 08:10:04">
+    <Property Name="ElementName" Value="[dv].[HubCurrencies].[Hash]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[HubCurrencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HKeyCurrencies" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9e989ab8-f4d8-42bc-a0be-0cfbdc6959a1" ChangeDateTime="09/09/2019 08:10:08">
+    <Property Name="ElementName" Value="[dbo].[HubValuations].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[HubValuations]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HKey" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="706d53b3-d9f0-4a30-a914-a6e18bbb23aa" ChangeDateTime="09/09/2019 08:11:49">
+    <Property Name="ElementName" Value="[dv].[SatCurrencies].[CurrencyHashKey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[SatCurrencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HKeyCurrencies" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="49a9d77f-e69b-430c-b3ec-a8e8c21eb31e" ChangeDateTime="09/09/2019 08:12:11">
+    <Property Name="ElementName" Value="[dbo].[HubValuations].[HKey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[HubValuations]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HKeyValuations" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f5825db2-c3fe-4cc2-b872-12c0a15c8a82" ChangeDateTime="09/09/2019 08:12:30">
+    <Property Name="ElementName" Value="[dv].[SatCurrencies].[HashDiff]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[SatCurrencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HDiffCurrencies" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="550950f9-1ab3-40a5-be20-8851ba9f1c22" ChangeDateTime="09/09/2019 08:12:44">
+    <Property Name="ElementName" Value="[dv].[SatValuations].[HashDiff]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[SatValuations]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HDiffValuations" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2033df0b-57f5-4ff0-ba6e-71c796ade4ec" ChangeDateTime="09/09/2019 08:12:55">
+    <Property Name="ElementName" Value="[dv].[SatValuations].[ValuationsHashKey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[SatValuations]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HKeyValuations" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="be31556c-96a5-4a38-9052-53aa9d4e2619" ChangeDateTime="09/09/2019 08:14:50">
+    <Property Name="ElementName" Value="[dv].[SatCurrencies].[HKeyCurrencies]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[SatCurrencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HKeyCurrency" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="081203a3-785e-407f-b504-4a8c16050f5f" ChangeDateTime="09/09/2019 08:14:54">
+    <Property Name="ElementName" Value="[dv].[SatCurrencies].[HDiffCurrencies]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[SatCurrencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HDiffCurrency" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="46895a9b-151b-4702-a7cf-570e062115c2" ChangeDateTime="09/09/2019 08:14:58">
+    <Property Name="ElementName" Value="[dv].[SatValuations].[HKeyValuations]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[SatValuations]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HKeyValuation" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a9a53ac9-d16f-475b-bc5a-5a414271f4d8" ChangeDateTime="09/09/2019 08:14:59">
+    <Property Name="ElementName" Value="[dv].[SatValuations].[HDiffValuations]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[SatValuations]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HDiffValuation" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="29194dda-d87b-4ad9-9e44-221f362f9fba" ChangeDateTime="09/09/2019 08:22:50">
+    <Property Name="ElementName" Value="[dv].[HubCurrencies].[HKeyCurrencies]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[HubCurrencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HKeyCurrency" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6f071564-d882-4988-9c79-e8f374b77259" ChangeDateTime="09/09/2019 08:23:53">
+    <Property Name="ElementName" Value="[stg].[PACER_Currencies].[Out_HKEYHubCurrencies]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_HKeyHubCurrencies" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5d33abc1-1777-4dc3-a2df-32e830fa7340" ChangeDateTime="09/09/2019 08:24:00">
+    <Property Name="ElementName" Value="[stg].[PACER_Currencies].[Out_HKeyHubCurrencies]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_HKeyHubCurrency" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a7691ad4-1ef2-4670-8b5d-6e56ad50d4fa" ChangeDateTime="09/09/2019 08:24:30">
+    <Property Name="ElementName" Value="[stg].[PACER_Currencies].[Out_HKeyHubCurrency]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_HKeyHubCurrencies" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="da5ab52d-dd1c-4c6a-a558-3bd2b97333f5" ChangeDateTime="09/09/2019 08:26:09">
+    <Property Name="ElementName" Value="[stg].[PACER_Currencies].[Out_CurrencyPLHashDiff]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Currencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_HDiffCurrencyPL" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f77474c2-c312-42a6-91a6-7a2449baf3b7" ChangeDateTime="09/09/2019 08:26:21">
+    <Property Name="ElementName" Value="[dv].[SatCurrencies].[HDiffCurrency]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[SatCurrencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HDiffCurrencyPL" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="834f1245-5702-4a7a-8e81-53e8e1b8b065" ChangeDateTime="09/09/2019 08:26:27">
+    <Property Name="ElementName" Value="[dv].[SatValuations].[HDiffValuation]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[SatValuations]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HDiffValuationPL" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d746019b-7d8f-4d4f-a9b6-be1eb6e610de" ChangeDateTime="09/09/2019 08:40:33">
+    <Property Name="ElementName" Value="[dbo].[HubValuations].[HKeyValuations]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[HubValuations]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HKeyValuation" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3329b7cc-dd2f-4c4e-8ac1-48babfadef49" ChangeDateTime="09/09/2019 15:43:57">
+    <Property Name="ElementName" Value="[stg].[PACER_Transactions].[Out_HashKey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[stg].[PACER_Transactions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Out_HKeyTransaction" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ae1e8197-0028-4d27-b3e9-a977e93fc1fb" ChangeDateTime="09/13/2019 13:35:54">
+    <Property Name="ElementName" Value="[dv].[LinkTransactions].[HKeyLinkTransaction]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[LinkTransactions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HKeyTransaction" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7830b426-ace1-42f3-9e3e-f6df94d0c7c8" ChangeDateTime="09/17/2019 13:46:09">
+    <Property Name="ElementName" Value="[dv].[SatCurrencies].[Meta_LastLoadDateTime]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[SatCurrencies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Meta_LoadEndDateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e03bc12b-33e1-456d-9fbd-fe2229aa5dee" ChangeDateTime="09/26/2019 08:40:06">
+    <Property Name="ElementName" Value="[bv].[LinkPortfolioSecuritySummary].[HKeyLocalCurrency]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[bv].[LinkPortfolioSecuritySummary]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HKeyPriceCurrency" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="44143cea-99cf-4366-a251-24c42d6ca487" ChangeDateTime="09/26/2019 08:48:23">
+    <Property Name="ElementName" Value="[bv].[LinkPortfolioSecuritySummary].[HKeyPriceLC]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[bv].[LinkPortfolioSecuritySummary]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HKeyPriceCurrencyPrice" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b4d1094b-58db-4f83-a2d4-7f1460022b3a" ChangeDateTime="09/26/2019 08:48:37">
+    <Property Name="ElementName" Value="[bv].[LinkPortfolioSecuritySummary].[HKeyFXRateToGBP]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[bv].[LinkPortfolioSecuritySummary]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HKeyPriceCurrencyFXRateToGBP" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="487894bb-33d3-460e-9b72-ff1b75f22e2a" ChangeDateTime="10/15/2019 09:41:42">
+    <Property Name="ElementName" Value="[bv].[SatPortfolioSecurityHoldings].[InvestmentCapitalLC]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[bv].[SatPortfolioSecurityHoldings]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SumInvestmentCapitalLC" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2cb0f34a-5828-407c-ad44-b04afb9b6688" ChangeDateTime="10/15/2019 09:41:44">
+    <Property Name="ElementName" Value="[bv].[SatPortfolioSecurityHoldings].[InvestmentCapitalBC]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[bv].[SatPortfolioSecurityHoldings]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SumInvestmentCapitalBC" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6ae5ea15-4775-4b19-aacc-93b6ef0510de" ChangeDateTime="11/29/2019 15:21:29">
+    <Property Name="ElementName" Value="[dv].[Pacer_HubInvestee].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dv].[Pacer_HubInvestee]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HKeySecurity" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ebc7dced-b501-4972-bdc9-a09d5a9c811e" ChangeDateTime="12/02/2019 14:35:52">
+    <Property Name="ElementName" Value="[tmp].[PACER_SecsBackers].[10000 SECURITY ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[tmp].[PACER_SecsBackers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SECURITY ID" />
+  </Operation>
+</Operations>

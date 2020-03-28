@@ -1,0 +1,131 @@
+!Security classification codes
+*Code   Security Class
+~000999999~ CASH                        
+~200999999~ UNITED KINGDOM              
+~200515999~   UNITED KINGDOM              
+~210999999~ EUROPE                      
+~210035999~   AUSTRIA                     
+~210050999~   BELGIUM                     
+~210120999~   CYPRUS                      
+~210130999~   DENMARK                     
+~210150999~   FINLAND                     
+~210155999~   FRANCE                      
+~210160999~   GERMANY                     
+~210170999~   GREECE                      
+~210180999~   GUERNSEY & JERSEY           
+~210205999~   IRELAND                     
+~210215999~   ITALY                       
+~210280999~   LUXEMBOURG                  
+~210335999~   NETHERLANDS                 
+~210360999~   NORWAY                      
+~210405999~   PORTUGAL                    
+~210460999~   SPAIN                       
+~210470999~   SWEDEN                      
+~210475999~   SWITZERLAND                 
+~210610999~   EUROPE DEV REGION           
+~220999999~ EUROPE EMERGING             
+~220025999~   ARMENIA                     
+~220075999~   BULGARIA                    
+~220115999~   CROATIA                     
+~220125999~   CZECH REPUBLIC              
+~220145999~   ESTONIA                     
+~220190999~   HUNGARY                     
+~220260999~   LATVIA                      
+~220275999~   LITHUANIA                   
+~220400999~   POLAND                      
+~220415999~   ROMANIA                     
+~220420999~   RUSSIA                      
+~220430999~   SERBIA                      
+~220440999~   SLOVAK REPUBLIC             
+~220445999~   SLOVENIA                    
+~220500999~   TURKEY                      
+~220505999~   UKRAINE                     
+~220615999~   EUROPE EMRG REGION          
+~230999999~ ASIA                        
+~230010999~   AFGHANISTAN                 
+~230045999~   BANGLADESH                  
+~230195999~   INDIA                       
+~230240999~   KAZAKHSTAN                  
+~230370999~   PAKISTAN                    
+~230465999~   SRI LANKA                   
+~230605999~   ASIA REGION                 
+~240999999~ FAR EAST & PACIFIC          
+~240030999~   AUSTRALIA                   
+~240080999~   CAMBODIA                    
+~240100999~   CHINA                       
+~240185999~   HONG KONG                   
+~240200999~   INDONESIA                   
+~240230999~   JAPAN                       
+~240255999~   LAOS                        
+~240295999~   MALAYSIA                    
+~240325999~   MYANMAR                     
+~240345999~   NEW ZEALAND                 
+~240380999~   PAPUA NEW GUINEA            
+~240395999~   PHILIPPINES                 
+~240435999~   SINGAPORE                   
+~240455999~   SOUTH KOREA                 
+~240485999~   TAIWAN                      
+~240490999~   THAILAND                    
+~240535999~   VIETNAM                     
+~240620999~   FAR EAST PAC REGION         
+~250999999~ NORTH AMERICA               
+~250040999~   BAHAMAS                     
+~250055999~   BERMUDA                     
+~250085999~   CANADA                      
+~250090999~   CAYMAN ISLANDS              
+~250520999~   UNITED STATES               
+~250635999~   NORTH AMERICA REGION        
+~260999999~ LATIN AMERICA               
+~260020999~   ARGENTINA                   
+~260060999~   BOLIVIA                     
+~260070999~   BRAZIL                      
+~260095999~   CHILE                       
+~260105999~   COLOMBIA                    
+~260110999~   COSTA RICA                  
+~260135999~   ECUADOR                     
+~260175999~   GUATEMALA                   
+~260225999~   JAMAICA                     
+~260310999~   MEXICO                      
+~260340999~   NETHERLANDS ANTILLES        
+~260350999~   NICARAGUA                   
+~260375999~   PANAMA                      
+~260385999~   PARAGUAY                    
+~260390999~   PERU                        
+~260410999~   PUERTO RICO                 
+~260525999~   URUGUAY                     
+~260530999~   VENEZUELA                   
+~260625999~   LATIN AMERICA REGION        
+~270999999~ MIDDLE EAST                 
+~270140999~   EGYPT                       
+~270210999~   ISRAEL                      
+~270235999~   JORDAN                      
+~270250999~   KUWAIT                      
+~270265999~   LEBANON                     
+~270270999~   LIBYA                       
+~270365999~   OMAN                        
+~270425999~   SAUDI ARABIA                
+~270480999~   SYRIA                       
+~270510999~   UNITED ARAB EMIRATES        
+~270630999~   MIDDLE EAST REGION          
+~280999999~ AFRICA                      
+~280015999~   ALGERIA                     
+~280065999~   BOTSWANA                    
+~280165999~   GHANA                       
+~280220999~   IVORY COAST                 
+~280245999~   KENYA                       
+~280285999~   MADAGASCAR                  
+~280290999~   MALAWI                      
+~280300999~   MALI                        
+~280305999~   MAURITIUS                   
+~280315999~   MOROCCO                     
+~280320999~   MOZAMBIQUE                  
+~280330999~   NAMIBIA                     
+~280355999~   NIGERIA                     
+~280450999~   SOUTH AFRICA                
+~280495999~   TUNISIA                     
+~280540999~   ZAMBIA                      
+~280545999~   ZIMBABWE                    
+~280600999~   AFRICA REGION               
+~290999999~ GLOBAL                      
+~295999999~ FIXED INTEREST              
+~298999999~ INDEX                       

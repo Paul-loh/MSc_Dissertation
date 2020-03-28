@@ -1,0 +1,42 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:DelayValidation="True"
+  DTS:ObjectName="HSBC_NET Positions Meta"
+  DTS:DTSID="{2757f587-b850-4d4d-b66f-88ae345d0a60}"
+  DTS:Description="Positions (Holdings) Meta Data from HSBC.Net Client View"
+  DTS:CreationName="FLATFILE">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[$Project::FileIn_HSBC_NET_POSITIONS_CSV]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:Format="Delimited"
+      DTS:LocaleID="2057"
+      DTS:HeaderRowDelimiter="_x000A_"
+      DTS:RowDelimiter=""
+      DTS:TextQualifier="_x0022_"
+      DTS:CodePage="1252"
+      DTS:AlwaysCheckForRowDelimiters="False"
+      DTS:ConnectionString="\\caledonia.com\Systems\Integration\Dev\InputFiles\HSBCNet\PositionStatement\DWH\Position_Statement.CSV">
+      <DTS:FlatFileColumns>
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="50"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="ReportType"
+          DTS:DTSID="{3635F3A8-9F4B-41C0-BFC9-95C77FA95FB2}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x000A_"
+          DTS:MaximumWidth="50"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="SourceSysExportDateTime"
+          DTS:DTSID="{46C2CE21-092B-491F-9EC8-CEDCDD2FE288}"
+          DTS:CreationName="" />
+      </DTS:FlatFileColumns>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

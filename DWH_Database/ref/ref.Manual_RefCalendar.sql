@@ -1,0 +1,53 @@
+﻿CREATE TABLE [ref].[RefCalendar]
+(
+	[DateKey]				INT NOT NULL,
+	[Meta_LoadDateTime]		DATETIME2 NOT NULL,
+	[Meta_LoadEndDateTime]	DATETIME2 NOT NULL DEFAULT N'9999-12-31',
+	[Meta_RecordSource]		NVARCHAR (1000) NOT NULL,
+	[Meta_ETLProcessID]		INT	NOT NULL,					-- FK to ID of import batch audit table	?
+
+	[CalendarDate]			DATETIME2 NOT NULL,
+	[Day]					INT NOT NULL,
+	[Month]					INT NOT NULL,
+	[Year]					INT NOT NULL,
+	[Quarter]				INT NOT NULL,
+	[DayOfWeek]				INT NOT NULL,
+	[DayOccInMonth]			INT NOT NULL,
+	[DayOfQuarter]			INT NOT NULL,
+	[DayOfYear]				INT NOT NULL,
+	[WeekNumISO]			INT NOT NULL,
+	[MonthOfQuarter]		INT NOT NULL,
+	[StartOfMonth]			DATETIME2 NOT NULL,
+	[EndOfMonth]			DATETIME2 NOT NULL,
+	[StartOfQuarter]		DATETIME2 NOT NULL,
+	[EndOfQuarter]			DATETIME2 NOT NULL,
+	[StartOfCalYear]		DATETIME2 NOT NULL,
+	[EndOfCalYear]			DATETIME2 NOT NULL,
+	[StartOfFinYear]		DATETIME2 NOT NULL,
+	[EndOfFinYear]			DATETIME2 NOT NULL,
+	[d]						NVARCHAR(2) NULL,
+	[dd]					NCHAR(2) NULL,
+	[ddd]					NCHAR(3) NULL,
+	[dddd]					NVARCHAR(9) NULL,
+	[m]						NVARCHAR(2) NULL,
+	[mm]					NCHAR(2) NULL,
+	[mmm]					NCHAR(3) NULL,
+	[mmmm]					NVARCHAR(9) NULL,
+	[q]						NCHAR(1) NULL,
+	[qqqq]					NVARCHAR(6) NULL,
+	[yy]					NCHAR(2) NULL,
+	[yyyy]					NCHAR(4) NULL,
+	[FY_m]					NVARCHAR(2) NULL,
+	[FY_mm]					NCHAR(2) NULL,
+	[FY_q]					NCHAR(1) NULL,
+	[FY_qqqq]				NVARCHAR(6) NULL,
+	[FY_yy]					NCHAR(2) NULL,
+	[FY_yyyy]				NCHAR(4) NULL,
+	[IsWeekDay]				BIT NULL,
+	[IsHolidayUK]			BIT NULL,
+	[HolidayUK]				NVARCHAR(100) NULL
+
+	CONSTRAINT [PK_Calendar] PRIMARY KEY CLUSTERED ( [DateKey] ASC, [Meta_LoadDateTime] ASC, [Meta_LoadEndDateTime] ASC ),
+	CONSTRAINT [IX_Calendar_CalendarDate] UNIQUE NONCLUSTERED ( [CalendarDate] ASC, [Meta_LoadDateTime] ASC, [Meta_LoadEndDateTime] ASC)		-- Good practice to add a unique index constraint on Business Key columns	
+) ON [PRIMARY]
+GO

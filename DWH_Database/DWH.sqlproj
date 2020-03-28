@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DWH</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{f1937119-5836-4bf4-825a-fd43b0c1cdea}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DWH</RootNamespace>
+    <AssemblyName>DWH</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <TargetDatabase>DWH</TargetDatabase>
+    <DacDescription>Release notes:
+...</DacDescription>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="1 - Staging Layer - Tables" />
+    <Folder Include="Prototype" />
+    <Folder Include="audit" />
+    <Folder Include="setup scripts" />
+    <Folder Include="tmp" />
+    <Folder Include="1 - Staging - ETL Logic" />
+    <Folder Include="ETL FinRep InfoMart" />
+    <Folder Include="2 - Data Vault Layer - Tables" />
+    <Folder Include="3 - Business Vault Layer - Tables" />
+    <Folder Include="Utility" />
+    <Folder Include="2 - Data Vault - ETL Logic" />
+    <Folder Include="3 - Business Vault - ETL Logic" />
+    <Folder Include="ref" />
+    <Folder Include="4 - InfoMart - FinRep - Views" />
+    <Folder Include="3 - Business Vault Layer - Views" />
+    <Folder Include="5 - Monitoring" />
+    <Folder Include="4 - InfoMart - FinRep - Stored Procs" />
+    <Folder Include="0 - Initial DWH Load" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="1 - Staging Layer - Tables\stg.Pacer_FXRates.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Pacer_Securities.sql" />
+    <Build Include="audit\StartProcess.sql" />
+    <Build Include="audit\EndProcess.sql" />
+    <Build Include="audit\StartTask.sql" />
+    <Build Include="audit\EndTask.sql" />
+    <Build Include="audit\StartPackage.sql" />
+    <Build Include="audit\EndPackage.sql" />
+    <Build Include="audit\Process.sql" />
+    <Build Include="audit\Package.sql" />
+    <Build Include="audit\Task.sql" />
+    <Build Include="setup scripts\Create DWH Schemas.sql" />
+    <Build Include="tmp\tmp.Pacer_Securities.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgPacer_Securities.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Manual_Currencies.sql" />
+    <Build Include="tmp\tmp.Manual_Currencies.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgManual_Currencies.sql" />
+    <Build Include="tmp\tmp.Pacer_Transactions.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Pacer_Transactions.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgPacer_Transactions.sql" />
+    <Build Include="tmp\tmp.Pacer_Prices.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Pacer_Prices.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgPacer_Prices.sql" />
+    <Build Include="tmp\tmp.Pacer_FXRates.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgPacer_FXRates.sql" />
+    <None Include="Utility\Hash Function Workings.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Manual_SatCurrencies.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_HubValuations.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatSecurities.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Manual_HubCurrencies.sql" />
+    <Build Include="tmp\tmp.Pacer_Valuations.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgPacer_Valuations.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Pacer_Valuations.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatValuations.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatTransactions.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_LinkTransactions.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_HubSecurities.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVPacer_Valuations.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVManual_Currencies.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVPacer_Securities.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_HubPortfolios.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatPortfolios.sql" />
+    <Build Include="tmp\tmp.Pacer_Portfolios.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Pacer_Portfolios.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgPacer_Portfolios.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVPacer_Portfolios.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVPacer_Transactions.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_LinkPrices.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVPacer_Prices.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatPrices.sql" />
+    <Build Include="ref\ref.Manual_RefCalendar.sql" />
+    <Build Include="ref\ref.Manual_RefPriceSources.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_LinkFXRates.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatFXRates.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVPacer_FXRates.sql" />
+    <Build Include="3 - Business Vault Layer - Tables\bv.LinkPortfolioSecuritySummary.sql" />
+    <Build Include="3 - Business Vault Layer - Tables\bv.SatPortfolioSecurityValuations.sql" />
+    <Build Include="3 - Business Vault - ETL Logic\PACER_LoadBVPortfolioSecuritySummary.sql" />
+    <Build Include="3 - Business Vault - ETL Logic\PACER_LinkSecurityPriorityPrice.sql" />
+    <Build Include="3 - Business Vault Layer - Tables\bv.SatPortfolioSecurityHoldings.sql" />
+    <Build Include="tmp\tmp.HSBCNet_CustodianPositions.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.HSBCNET_SatCustodianPositions.sql" />
+    <Build Include="ref\ref.Manual_RefSecurityIdentifierMappings.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgHSBCNET_Positions.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.HSBCNET_CustodianPositions.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.HSBCNET_LinkCustodianPositions.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.HSBCNET_SatCustodianSecurities.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.HSBCNET_HubCustodianSecurities.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.HSBCNET_SatCustodianAccounts.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.HSBCNET_HubCustodianAccounts.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVHSBCNET_CustodianPositions.sql" />
+    <None Include="3 - Business Vault Layer - Tables\bv.LinkSecuritySummary.sql" />
+    <None Include="3 - Business Vault Layer - Tables\bv.SatSecurityValuations.sql" />
+    <None Include="3 - Business Vault Layer - Tables\bv.SatSecurityHoldings.sql" />
+    <None Include="3 - Business Vault - ETL Logic\PACER_LoadBVSecuritySummary.sql" />
+    <Build Include="3 - Business Vault Layer - Tables\bv.LinkSecuritySummaryToCustodianPosition.sql" />
+    <Build Include="3 - Business Vault - ETL Logic\REC_LoadBVLinkSecuritySummaryToCustodianPositions.sql" />
+    <Build Include="3 - Business Vault - ETL Logic\REC_LoadBVLinkPortfolioSecuritySummaryToCustodianPositions.sql" />
+    <Build Include="3 - Business Vault Layer - Tables\bv.LinkPortfolioSecuritySummaryToCustodianPosition.sql" />
+    <Build Include="4 - InfoMart - FinRep - Views\InfoMartFinRep.FactPortfolioSecuritySummary.sql" />
+    <Build Include="4 - InfoMart - FinRep - Views\InfoMartFinRep.DimPortfolios.sql" />
+    <Build Include="tmp\tmp.Pacer_IndustryHierarchy.sql" />
+    <Build Include="tmp\tmp.Manual_Countries.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgPacer_IndustryHierarchy.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Pacer_IndustryHierarchy.sql" />
+    <Build Include="tmp\tmp_Pacer_SecurityClassification.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Pacer_SecurityClassification.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgPacer_SecurityClassifications.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_LinkIndustryHierarchy.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_HubIndustryHierarchyLevel.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatIndustryHierarchyLevel.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVPacer_IndustryHierarchy.sql" />
+    <Build Include="4 - InfoMart - FinRep - Views\InfoMartFinRep.FactCustodianSecurityPosition.sql" />
+    <Build Include="4 - InfoMart - FinRep - Views\InfoMartFinRep.DimCustodianSecurity.sql" />
+    <Build Include="4 - InfoMart - FinRep - Views\InfoMartFinRep.DimCustodianAccount.sql" />
+    <Build Include="4 - InfoMart - FinRep - Views\InfoMartFinRep.DimSecurityMapping.sql" />
+    <Build Include="4 - InfoMart - FinRep - Views\InfoMartFinRep.DimSecurities.sql" />
+    <None Include="4 - InfoMart - FinRep - Views\InfoMartFinRep.FactSecuritySummary.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVPacer_SecuritiesClassifications.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatIndustryHierarchyEffectivity.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_LinkSecurityClassification.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatSecurityClassificationEffectivity.sql" />
+    <Build Include="4 - InfoMart - FinRep - Views\InfoMartFinRep.DimIndustryHierarchy.sql" />
+    <Build Include="4 - InfoMart - FinRep - Views\InfoMartFinRep.FactTransaction.sql" />
+    <Build Include="setup scripts\Create Indexes.sql" />
+    <Build Include="4 - InfoMart - FinRep - Views\InfoMartFinRep.FactPrices.sql" />
+    <Build Include="4 - InfoMart - FinRep - Views\InfoMartFinRep.FactFXRates.sql" />
+    <Build Include="4 - InfoMart - FinRep - Views\InfoMartFinRep.DimCurrencies.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_HubBackers.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatBackers.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_LinkSecurityBackers.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatSecurityBackersEffectivity.sql" />
+    <Build Include="tmp\tmp.Pacer_Backers.sql" />
+    <Build Include="tmp\tmp.Pacer_SecurityBackers.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgPacer_Backers.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Pacer_Backers.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVPacer_Backers.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgPacer_SecurityBackers.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Pacer_SecurityBackers.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVPacer_SecurityBackers.sql" />
+    <Build Include="4 - InfoMart - FinRep - Views\InfoMartFinRep.DimInvestee.sql" />
+    <Build Include="3 - Business Vault Layer - Views\SatSecurityBackers.sql" />
+    <Build Include="tmp\tmp.Pacer_MasterPortfolios.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgPacer_MasterPortfolios.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Pacer_MasterPortfolios.sql" />
+    <Build Include="tmp\tmp.Pacer_MasterPortfolioSubsidiaries.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Pacer_MasterPortfolioSubsidiaries.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgPacer_MasterPortfolioSubsidiaries.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatPortfolioMasterType.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_LinkPortfolioMasterSubsidiary.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVPacer_PortfolioMasterTypes.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVPacer_PortfolioMasterSubsidiaries.sql" />
+    <Build Include="tmp\tmp.Pacer_RegionHierarchy.sql" />
+    <Build Include="tmp\tmp.Pacer_AssetHierarchy.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Pacer_RegionHierarchy.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Pacer_AssetHierarchy.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_LinkRegionHierarchy.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_LinkAssetHierarchy.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_HubRegionHierarchyLevel.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_HubAssetHierarchyLevel.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatRegionHierarchyLevel.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatRegionHierarchyEffectivity.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatAssetHierarchyLevel.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatAssetHierarchyEffectivity.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgPacer_RegionHierarchy.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgPacer_AssetHierarchy.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVPacer_RegionHierarchy.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVPacer_AssetHierarchy.sql" />
+    <Build Include="4 - InfoMart - FinRep - Views\InfoMartFinRep.DimRegionHierarchy.sql" />
+    <Build Include="4 - InfoMart - FinRep - Views\InfoMartFinRep.DimAssetHierarchy.sql" />
+    <Build Include="ref\ref.Manual_RefTransactionAnalysisMapping.sql" />
+    <None Include="5 - Monitoring\Package Monitoring.sql" />
+    <Build Include="tmp\tmp.Manual_Calendar.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Manual_Calendar.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgManual_Calendar.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVManual_Calendar.sql" />
+    <Build Include="tmp\tmp.Manual_PriceSources.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Manual_PriceSources.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgManual_PriceSources.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVManual_PriceSources.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetFactFXRates.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetFactPrices.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetDimAssetHierarchy.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetDimCurrencies.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetDimCustodianAccount.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetDimIndustryHierarchy.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetDimInvestee.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetDimPortfolios.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetDimRegionHierarchy.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetDimSecurities.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetDimSecurityMapping.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetFactCustodianSecurityPosition.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetFactPortfolioSecuritySummary.sql" />
+    <None Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetFactSecuritySummary.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetDimCustodianSecurity.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetFactTransaction.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetDimReconciliationCalendar.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetDimCalendar.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetDimCalculationCalendar.sql" />
+    <Build Include="tmp\tmp.Manual_TransactionMappings.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Manual_TransactionMappings.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgManual_TransactionMappings.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVManual_TransactionMappings.sql" />
+    <Build Include="0 - Initial DWH Load\etl.INITIAL_LOAD_Clear_All_DWH_Tables.sql" />
+    <Build Include="0 - Initial DWH Load\etl.INITIAL_LOAD_Import_FX_From_Integration_DB.sql" />
+    <Build Include="0 - Initial DWH Load\etl.INITIAL_LOAD_Import_Prices_From_Integration_DB.sql" />
+    <Build Include="0 - Initial DWH Load\etl.INITIAL_LOAD_Import_Transactions_From_Integration_DB.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetRefTransactionAnalysisMapping.sql" />
+    <Build Include="0 - Initial DWH Load\etl.INITIAL_LOAD_Create_Ghost_Records.sql" />
+    <Build Include="tmp\tmp.Manual_SecurityIdentifierMappings.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Manual_SecurityIdentityMappings.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgManual_SecurityIdentifierMappings.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVManual_SecurityIdentifierMappings.sql" />
+    <Build Include="tmp\tmp.Pacer_Brokers.sql" />
+    <Build Include="1 - Staging Layer - Tables\stg.Pacer_Brokers.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_HubBrokers.sql" />
+    <Build Include="2 - Data Vault Layer - Tables\dv.Pacer_SatBrokers.sql" />
+    <Build Include="1 - Staging - ETL Logic\etl.LoadStgPacer_Brokers.sql" />
+    <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVPacer_Brokers.sql" />
+    <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetDimBrokers.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="DWH.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Prototype\Populate Prototype.sql" />
+    <None Include="setup scripts\Create DB Roles.sql" />
+    <PostDeploy Include="setup scripts\Create Hub Ghost Records.sql" />
+    <PreDeploy Include="setup scripts\Create Linked Server - Integration DB.sql" />
+  </ItemGroup>
+</Project>

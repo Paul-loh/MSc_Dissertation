@@ -1,0 +1,640 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1400,
+  "model": {
+    "culture": "en-GB",
+    "dataSources": [
+      {
+        "type": "structured",
+        "name": "SQL/ ;DWH",
+        "connectionDetails": {
+          "protocol": "tds",
+          "address": {
+            "server": ".",
+            "database": "DWH"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {},
+        "credential": {
+          "AuthenticationKind": "ServiceAccount",
+          "EncryptConnection": false,
+          "PrivacySetting": "Public"
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "InfoMartFinRep DimPortfolio",
+        "columns": [
+          {
+            "name": "DimPortfolioID",
+            "dataType": "string",
+            "sourceColumn": "DimPortfolioID"
+          },
+          {
+            "name": "Meta_Portf_LoadDateTime",
+            "dataType": "dateTime",
+            "sourceColumn": "Meta_Portf_LoadDateTime"
+          },
+          {
+            "name": "PortfCode",
+            "dataType": "string",
+            "sourceColumn": "PortfCode"
+          },
+          {
+            "name": "PortfName",
+            "dataType": "string",
+            "sourceColumn": "PortfName"
+          },
+          {
+            "name": "PortfStatus",
+            "dataType": "string",
+            "sourceColumn": "PortfStatus"
+          },
+          {
+            "name": "PortfType",
+            "dataType": "string",
+            "sourceColumn": "PortfType"
+          },
+          {
+            "name": "ResidenceCtry",
+            "dataType": "string",
+            "sourceColumn": "ResidenceCtry"
+          },
+          {
+            "name": "ResidenceRegion",
+            "dataType": "string",
+            "sourceColumn": "ResidenceRegion"
+          },
+          {
+            "name": "LotIndicator",
+            "dataType": "string",
+            "sourceColumn": "LotIndicator"
+          },
+          {
+            "name": "InitDate",
+            "dataType": "string",
+            "sourceColumn": "InitDate"
+          },
+          {
+            "name": "AccountExec",
+            "dataType": "string",
+            "sourceColumn": "AccountExec"
+          },
+          {
+            "name": "AccountNumber",
+            "dataType": "string",
+            "sourceColumn": "AccountNumber"
+          },
+          {
+            "name": "Address1",
+            "dataType": "string",
+            "sourceColumn": "Address1"
+          },
+          {
+            "name": "Address2",
+            "dataType": "string",
+            "sourceColumn": "Address2"
+          },
+          {
+            "name": "BaseCcy",
+            "dataType": "string",
+            "sourceColumn": "BaseCcy"
+          },
+          {
+            "name": "BookCost",
+            "dataType": "double",
+            "sourceColumn": "BookCost"
+          },
+          {
+            "name": "CumulGain",
+            "dataType": "double",
+            "sourceColumn": "CumulGain"
+          },
+          {
+            "name": "CustAcctNumber",
+            "dataType": "string",
+            "sourceColumn": "CustAcctNumber"
+          },
+          {
+            "name": "CustodianCode",
+            "dataType": "string",
+            "sourceColumn": "CustodianCode"
+          },
+          {
+            "name": "MarketValue",
+            "dataType": "double",
+            "sourceColumn": "MarketValue"
+          },
+          {
+            "name": "ObjectiveCode",
+            "dataType": "string",
+            "sourceColumn": "ObjectiveCode"
+          },
+          {
+            "name": "Permissions",
+            "dataType": "string",
+            "sourceColumn": "Permissions"
+          },
+          {
+            "name": "PersysFlag",
+            "dataType": "string",
+            "sourceColumn": "PersysFlag"
+          },
+          {
+            "name": "SettlementAcct",
+            "dataType": "string",
+            "sourceColumn": "SettlementAcct"
+          },
+          {
+            "name": "TaxType",
+            "dataType": "string",
+            "sourceColumn": "TaxType"
+          },
+          {
+            "name": "ValuationDate",
+            "dataType": "string",
+            "sourceColumn": "ValuationDate"
+          },
+          {
+            "name": "PoolMasterPortfolioCode",
+            "dataType": "string",
+            "sourceColumn": "PoolMasterPortfolioCode"
+          },
+          {
+            "name": "PoolMasterPortfolioName",
+            "dataType": "string",
+            "sourceColumn": "PoolMasterPortfolioName"
+          },
+          {
+            "name": "EntityMasterPortfolioCode",
+            "dataType": "string",
+            "sourceColumn": "EntityMasterPortfolioCode"
+          },
+          {
+            "name": "EntityMasterPortfolioName",
+            "dataType": "string",
+            "sourceColumn": "EntityMasterPortfolioName"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/ ;DWH\",",
+                "    InfoMartFinRep_DimPortfolio = Source{[Schema=\"InfoMartFinRep\",Item=\"DimPortfolio\"]}[Data]",
+                "in",
+                "    InfoMartFinRep_DimPortfolio"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "InfoMartFinRep DimSecurity",
+        "columns": [
+          {
+            "name": "DimSecurityID",
+            "dataType": "string",
+            "sourceColumn": "DimSecurityID"
+          },
+          {
+            "name": "Meta_Security_LoadDateTime",
+            "dataType": "dateTime",
+            "sourceColumn": "Meta_Security_LoadDateTime"
+          },
+          {
+            "name": "SecID",
+            "dataType": "string",
+            "sourceColumn": "SecID"
+          },
+          {
+            "name": "IssuerCode",
+            "dataType": "string",
+            "sourceColumn": "IssuerCode"
+          },
+          {
+            "name": "IssuerName",
+            "dataType": "string",
+            "sourceColumn": "IssuerName"
+          },
+          {
+            "name": "IssueDate",
+            "dataType": "dateTime",
+            "sourceColumn": "IssueDate"
+          },
+          {
+            "name": "IssueDesc",
+            "dataType": "string",
+            "sourceColumn": "IssueDesc"
+          },
+          {
+            "name": "Investee",
+            "dataType": "string",
+            "sourceColumn": "Investee"
+          },
+          {
+            "name": "BackerCode",
+            "dataType": "string",
+            "sourceColumn": "BackerCode"
+          },
+          {
+            "name": "BackerName",
+            "dataType": "string",
+            "sourceColumn": "BackerName"
+          },
+          {
+            "name": "IncomeCcyISO",
+            "dataType": "string",
+            "sourceColumn": "IncomeCcyISO"
+          },
+          {
+            "name": "CurrentExDate",
+            "dataType": "dateTime",
+            "sourceColumn": "CurrentExDate"
+          },
+          {
+            "name": "AccrualDate",
+            "dataType": "dateTime",
+            "sourceColumn": "AccrualDate"
+          },
+          {
+            "name": "EarningsCcyISO",
+            "dataType": "string",
+            "sourceColumn": "EarningsCcyISO"
+          },
+          {
+            "name": "ExchangeCtry",
+            "dataType": "string",
+            "sourceColumn": "ExchangeCtry"
+          },
+          {
+            "name": "Latest12MthEPS",
+            "dataType": "double",
+            "sourceColumn": "Latest12MthEPS"
+          },
+          {
+            "name": "Multiplier",
+            "dataType": "double",
+            "sourceColumn": "Multiplier"
+          },
+          {
+            "name": "OutstandingShares",
+            "dataType": "double",
+            "sourceColumn": "OutstandingShares"
+          },
+          {
+            "name": "PriceCcyISO",
+            "dataType": "string",
+            "sourceColumn": "PriceCcyISO"
+          },
+          {
+            "name": "PrimaryType",
+            "dataType": "string",
+            "sourceColumn": "PrimaryType"
+          },
+          {
+            "name": "SecondaryType",
+            "dataType": "string",
+            "sourceColumn": "SecondaryType"
+          },
+          {
+            "name": "TertiaryType",
+            "dataType": "string",
+            "sourceColumn": "TertiaryType"
+          },
+          {
+            "name": "Ticker",
+            "dataType": "string",
+            "sourceColumn": "Ticker"
+          },
+          {
+            "name": "VotingCode",
+            "dataType": "string",
+            "sourceColumn": "VotingCode"
+          },
+          {
+            "name": "DimIndustryHierarchyID",
+            "dataType": "string",
+            "sourceColumn": "DimIndustryHierarchyID"
+          },
+          {
+            "name": "IndustryHierarchyCode",
+            "dataType": "string",
+            "sourceColumn": "IndustryHierarchyCode"
+          },
+          {
+            "name": "DimRegionHierarchyID",
+            "dataType": "string",
+            "sourceColumn": "DimRegionHierarchyID"
+          },
+          {
+            "name": "RegionHierarchyCode",
+            "dataType": "string",
+            "sourceColumn": "RegionHierarchyCode"
+          },
+          {
+            "name": "DimAssetHierarchyID",
+            "dataType": "string",
+            "sourceColumn": "DimAssetHierarchyID"
+          },
+          {
+            "name": "AssetHierarchyCode",
+            "dataType": "string",
+            "sourceColumn": "AssetHierarchyCode"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/ ;DWH\",",
+                "    InfoMartFinRep_DimSecurity = Source{[Schema=\"InfoMartFinRep\",Item=\"DimSecurity\"]}[Data]",
+                "in",
+                "    InfoMartFinRep_DimSecurity"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "InfoMartFinRep FactTransaction",
+        "columns": [
+          {
+            "name": "TRANNUM",
+            "dataType": "int64",
+            "sourceColumn": "TRANNUM"
+          },
+          {
+            "name": "DimPortfolioID",
+            "dataType": "string",
+            "sourceColumn": "DimPortfolioID"
+          },
+          {
+            "name": "DimSecurityID",
+            "dataType": "string",
+            "sourceColumn": "DimSecurityID"
+          },
+          {
+            "name": "DimPriceCcyID",
+            "dataType": "string",
+            "sourceColumn": "DimPriceCcyID"
+          },
+          {
+            "name": "DimSettleCcyID",
+            "dataType": "string",
+            "sourceColumn": "DimSettleCcyID"
+          },
+          {
+            "name": "SeqEntryDateTime",
+            "dataType": "int64",
+            "sourceColumn": "SeqEntryDateTime"
+          },
+          {
+            "name": "PORTCODE",
+            "dataType": "string",
+            "sourceColumn": "PORTCODE"
+          },
+          {
+            "name": "SECID",
+            "dataType": "string",
+            "sourceColumn": "SECID"
+          },
+          {
+            "name": "TRANTYPE",
+            "dataType": "string",
+            "sourceColumn": "TRANTYPE"
+          },
+          {
+            "name": "FOOTNOTE",
+            "dataType": "string",
+            "sourceColumn": "FOOTNOTE"
+          },
+          {
+            "name": "TRADDATE",
+            "dataType": "dateTime",
+            "sourceColumn": "TRADDATE"
+          },
+          {
+            "name": "SHAREPAR",
+            "dataType": "double",
+            "sourceColumn": "SHAREPAR"
+          },
+          {
+            "name": "PriceCcyISO",
+            "dataType": "string",
+            "sourceColumn": "PriceCcyISO"
+          },
+          {
+            "name": "FXRATE",
+            "dataType": "double",
+            "sourceColumn": "FXRATE"
+          },
+          {
+            "name": "PRICEU",
+            "dataType": "double",
+            "sourceColumn": "PRICEU"
+          },
+          {
+            "name": "GROSAMTU",
+            "dataType": "double",
+            "sourceColumn": "GROSAMTU"
+          },
+          {
+            "name": "COMMISSU",
+            "dataType": "double",
+            "sourceColumn": "COMMISSU"
+          },
+          {
+            "name": "MISCTOTU",
+            "dataType": "double",
+            "sourceColumn": "MISCTOTU"
+          },
+          {
+            "name": "NETAMTU",
+            "dataType": "double",
+            "sourceColumn": "NETAMTU"
+          },
+          {
+            "name": "COSTOTLU",
+            "dataType": "double",
+            "sourceColumn": "COSTOTLU"
+          },
+          {
+            "name": "GAINU",
+            "dataType": "double",
+            "sourceColumn": "GAINU"
+          },
+          {
+            "name": "GROSAMTC",
+            "dataType": "double",
+            "sourceColumn": "GROSAMTC"
+          },
+          {
+            "name": "COMMISSC",
+            "dataType": "double",
+            "sourceColumn": "COMMISSC"
+          },
+          {
+            "name": "MISCTOTC",
+            "dataType": "double",
+            "sourceColumn": "MISCTOTC"
+          },
+          {
+            "name": "NETAMTC",
+            "dataType": "double",
+            "sourceColumn": "NETAMTC"
+          },
+          {
+            "name": "COSTOTLC",
+            "dataType": "double",
+            "sourceColumn": "COSTOTLC"
+          },
+          {
+            "name": "GAINC",
+            "dataType": "double",
+            "sourceColumn": "GAINC"
+          },
+          {
+            "name": "QuantityChange",
+            "dataType": "double",
+            "sourceColumn": "QuantityChange"
+          },
+          {
+            "name": "CostChangeLC",
+            "dataType": "double",
+            "sourceColumn": "CostChangeLC"
+          },
+          {
+            "name": "CostChangeBC",
+            "dataType": "double",
+            "sourceColumn": "CostChangeBC"
+          },
+          {
+            "name": "DEBITU",
+            "dataType": "double",
+            "sourceColumn": "DEBITU"
+          },
+          {
+            "name": "CREDITU",
+            "dataType": "double",
+            "sourceColumn": "CREDITU"
+          },
+          {
+            "name": "DEBITS",
+            "dataType": "double",
+            "sourceColumn": "DEBITS"
+          },
+          {
+            "name": "CREDITS",
+            "dataType": "double",
+            "sourceColumn": "CREDITS"
+          },
+          {
+            "name": "DEBITC",
+            "dataType": "double",
+            "sourceColumn": "DEBITC"
+          },
+          {
+            "name": "CREDITC",
+            "dataType": "double",
+            "sourceColumn": "CREDITC"
+          },
+          {
+            "name": "NetCashLC",
+            "dataType": "double",
+            "sourceColumn": "NetCashLC"
+          },
+          {
+            "name": "NetCashSC",
+            "dataType": "double",
+            "sourceColumn": "NetCashSC"
+          },
+          {
+            "name": "NetCashBC",
+            "dataType": "double",
+            "sourceColumn": "NetCashBC"
+          },
+          {
+            "name": "TRADTYPE",
+            "dataType": "string",
+            "sourceColumn": "TRADTYPE"
+          },
+          {
+            "name": "EXCUM",
+            "dataType": "string",
+            "sourceColumn": "EXCUM"
+          },
+          {
+            "name": "Net Amount BC",
+            "dataType": "double",
+            "sourceColumn": "Net Amount BC"
+          },
+          {
+            "name": "Net Amount LC",
+            "dataType": "double",
+            "sourceColumn": "Net Amount LC"
+          },
+          {
+            "name": "Transaction Category",
+            "dataType": "int64",
+            "sourceColumn": "Transaction Category"
+          },
+          {
+            "name": "Unit Category",
+            "dataType": "int64",
+            "sourceColumn": "Unit Category"
+          },
+          {
+            "name": "Cash Category",
+            "dataType": "int64",
+            "sourceColumn": "Cash Category"
+          },
+          {
+            "name": "Meta_ETLProcessID",
+            "dataType": "int64",
+            "sourceColumn": "Meta_ETLProcessID"
+          },
+          {
+            "name": "Meta_Tran_LoadDateTime",
+            "dataType": "dateTime",
+            "sourceColumn": "Meta_Tran_LoadDateTime"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/ ;DWH\",",
+                "    InfoMartFinRep_FactTransaction = Source{[Schema=\"InfoMartFinRep\",Item=\"FactTransaction\"]}[Data]",
+                "in",
+                "    InfoMartFinRep_FactTransaction"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "500"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
