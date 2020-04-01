@@ -3,3 +3,8 @@
 ################################################################################
 
 /DWH_Database/bin/Debug
+/DWH_Database/obj/Debug
+/DWH_Integration/obj/Development
+/DWH_Tabular/bin/Data
+*.dbmdl
+/DWH_Tabular/obj/Debug
