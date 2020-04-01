@@ -2,10 +2,4 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/DWH_Tabular/obj/Debug
-/DWH_Integration/obj/Development
-/DWH_Database/obj/Debug
 /DWH_Database/bin/Debug
-/DWH_Tabular/bin/Data
-*.jfm
-*.dbmdl
