@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DWH_Database",
+    "\\DWH_Database\\obj"
   ],
+  "SelectedNode": "\\DWH_Database\\obj",
   "PreviewInSolutionExplorer": false
 }

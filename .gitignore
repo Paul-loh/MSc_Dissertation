@@ -7,3 +7,5 @@
 /DWH_Database/obj/Debug
 /DWH_Database/bin/Debug
 /DWH_Tabular/bin/Data
+*.jfm
+*.dbmdl
