@@ -7,8 +7,9 @@
 		https://www.mssqltips.com/sqlservertip/5924/copy-or-duplicate-sql-server-integration-services-ssis-environments-using-tsql/
 */
 
-DECLARE @FOLDER_NAME NVARCHAR(128) = N'DWH';
-DECLARE @SOURCE_ENVIRONMENT NVARCHAR(128) = N'DEV';
+DECLARE @FOLDER_NAME NVARCHAR(128) = N'DWH',
+        @SOURCE_ENVIRONMENT NVARCHAR(128) = N'DEV';
+
 
 SELECT ',(' +
     '''' + v.[name] + '''' + ',' +

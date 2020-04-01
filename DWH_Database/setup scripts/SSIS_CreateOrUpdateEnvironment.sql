@@ -8,15 +8,14 @@
 		https://www.mssqltips.com/sqlservertip/5924/copy-or-duplicate-sql-server-integration-services-ssis-environments-using-tsql/
 */
 
-
 DECLARE
-	 @FOLDER_NAME             NVARCHAR(128) = N'DWH'
-	,@FOLDER_ID               BIGINT
-	,@TARGET_ENVIRONMENT_NAME NVARCHAR(128) = N'DEV'		-- Environment you want to create or update
-	,@ENVIRONMENT_ID          INT
-	,@VARIABLE_NAME           NVARCHAR(128)
-	,@VARIABLE_VALUE          NVARCHAR(1024)
-	,@VARIABLE_DESCRIPTION    NVARCHAR(1024)
+	     @FOLDER_NAME             NVARCHAR(128) = N'DWH'
+	    ,@FOLDER_ID               BIGINT
+	    ,@TARGET_ENVIRONMENT_NAME NVARCHAR(128) = N'DEV'		-- Environment you want to create or update
+	    ,@ENVIRONMENT_ID          INT
+	    ,@VARIABLE_NAME           NVARCHAR(128)
+	    ,@VARIABLE_VALUE          NVARCHAR(1024)
+	    ,@VARIABLE_DESCRIPTION    NVARCHAR(1024);
 
 DECLARE @ENVIRONMENT_VARIABLES TABLE (
 										  [name]        NVARCHAR(128)
@@ -77,9 +76,10 @@ FROM (
   --
   --
 ) AS v([name], [value], [description]);
- 
-SELECT * FROM @ENVIRONMENT_VARIABLES;  -- debug output		
 
+
+SELECT * FROM @ENVIRONMENT_VARIABLES;  -- debug output		
+GO
 
 
 --	Create Folder (if necessary)
