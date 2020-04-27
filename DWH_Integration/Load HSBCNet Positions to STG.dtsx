@@ -7,12 +7,12 @@
   DTS:CreatorName="CALEDONIA\Paul.Loh"
   DTS:DTSID="{1DEBEF4E-F245-4006-853C-1C4EA0EACB14}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.71"
+  DTS:LastModifiedProductVersion="15.0.2000.93"
   DTS:LocaleID="2057"
   DTS:ObjectName="Load HSBCNet Positions to STG"
   DTS:PackageType="5"
-  DTS:VersionBuild="348"
-  DTS:VersionGUID="{7E36880A-D331-4F6D-807B-A855A3F0B811}">
+  DTS:VersionBuild="351"
+  DTS:VersionGUID="{6156507E-22C4-48A1-ABD5-0F5C54FDE7FD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -465,35 +465,14 @@
           ReadOnlyVariables="User::DateTimeLoad,$Project::PathArchive_HSBCNET,$Project::PathInputFolder_HSBC_NET_POSITIONS"
           ReadWriteVariables="User::ErrorMessage">
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_7dbadf5e6d1542b494b92deaf0dd62cc")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_7dbadf5e6d1542b494b92deaf0dd62cc")]
-[assembly: AssemblyCopyright("Copyright @  2018")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="ST_ba6a9c9ef9ad46f293885b539728eed9.csproj"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{F77F0211-0AB0-4AAE-A6F4-F85C3BED17E4}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>ST_7dbadf5e6d1542b494b92deaf0dd62cc</RootNamespace><AssemblyName>ST_ba6a9c9ef9ad46f293885b539728eed9</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile><Compile Include="ScriptMain.cs"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" /><Host Name="ScriptTask" /><ProjectClient><HostIdentifier>SSIS_ST140</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
@@ -935,14 +914,35 @@ namespace ST_7dbadf5e6d1542b494b92deaf0dd62cc.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_7dbadf5e6d1542b494b92deaf0dd62cc")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_7dbadf5e6d1542b494b92deaf0dd62cc")]
+[assembly: AssemblyCopyright("Copyright @  2018")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -1227,7 +1227,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="\\caledonia.com\Systems\Integration\Dev\InputFiles\HSBCNet\PositionStatement\" />
+              Folder="D:\Systems\Integration\Dev\InputFiles\HSBCNet\PositionStatement\DWH\" />
             <FEFEProperty
               FileSpec="*.*" />
             <FEFEProperty
@@ -1257,15 +1257,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
               Language="CSharp"
               ReadOnlyVariables="User::FileInCurrentFile,$Project::PathArchive_HSBCNET"
               ReadWriteVariables="User::ErrorMessage">
-              <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1385,6 +1376,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
+              <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_7e4ca98694934accbe69b5e86670665d.Properties.Settings.get_Default():ST_7e4ca98694934accbe69b5e86670665d.Properties.Sett" +
+    "ings")]
+
+namespace ST_7e4ca98694934accbe69b5e86670665d.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
               <ProjectItem
                 Name="ST_ed2a8bcff1664e6588a6ce3a1a694468.csproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1673,35 +1693,6 @@ namespace ST_7e4ca98694934accbe69b5e86670665d
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_7e4ca98694934accbe69b5e86670665d.Properties.Settings.get_Default():ST_7e4ca98694934accbe69b5e86670665d.Properties.Sett" +
-    "ings")]
-
-namespace ST_7e4ca98694934accbe69b5e86670665d.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
-              <ProjectItem
                 Name="Properties\AssemblyInfo.cs"
                 Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -1731,6 +1722,15 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+              <ProjectItem
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -2026,15 +2026,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
               ReadOnlyVariables="User::FileInCurrentFile"
               ReadWriteVariables="User::DateTimeSrcSysExport,User::ErrorMessage,User::ReportTypeSrcSys">
               <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
-              <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -2153,6 +2144,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
+              <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_765bd50580b641a78f70550d8f43bbe4.Properties.Settings.get_Default():ST_765bd50580b641a78f70550d8f43bbe4.Properties.Sett" +
+    "ings")]
+
+namespace ST_765bd50580b641a78f70550d8f43bbe4.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
               <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -2445,35 +2465,6 @@ namespace ST_765bd50580b641a78f70550d8f43bbe4
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_765bd50580b641a78f70550d8f43bbe4.Properties.Settings.get_Default():ST_765bd50580b641a78f70550d8f43bbe4.Properties.Sett" +
-    "ings")]
-
-namespace ST_765bd50580b641a78f70550d8f43bbe4.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
-              <ProjectItem
                 Name="Properties\AssemblyInfo.cs"
                 Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -2503,6 +2494,15 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+              <ProjectItem
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -4192,65 +4192,65 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="167.2,41.6"
+          Size="167,42"
           Id="Package\Audit End Package"
-          TopLeft="254.444444303712,660.65001106242" />
+          TopLeft="244.444444303712,661.65001106242" />
         <NodeLayout
-          Size="163.2,41.6"
+          Size="163,42"
           Id="Package\Audit End Process"
-          TopLeft="225,763.816677690343" />
+          TopLeft="250,764.816677690343" />
         <NodeLayout
-          Size="171.2,41.6"
+          Size="171,42"
           Id="Package\Audit Start Package"
           TopLeft="241,175" />
         <NodeLayout
-          Size="168,41.6"
+          Size="168,42"
           Id="Package\Audit Start Process"
           TopLeft="16,171" />
         <NodeLayout
-          Size="192,41.6"
+          Size="192,42"
           Id="Package\Check Input Parameters"
-          TopLeft="244,372" />
+          TopLeft="230,370" />
         <NodeLayout
-          Size="215.2,41.6"
+          Size="215,42"
           Id="Package\Check Parent ETL Process ID"
           TopLeft="109,65" />
         <NodeLayout
-          Size="137.6,41.6"
+          Size="138,42"
           Id="Package\Dummy task"
-          TopLeft="616,726" />
+          TopLeft="631,699" />
         <NodeLayout
-          Size="163.2,41.6"
+          Size="163,42"
           Id="Package\For each HSBC Position file\Archive input files"
           TopLeft="69.7500097478428,532.777777777778" />
         <NodeLayout
-          Size="150.4,41.6"
+          Size="150,42"
           Id="Package\For each HSBC Position file\Audit End Task"
           TopLeft="71.9166666666666,384" />
         <NodeLayout
-          Size="153.6,41.6"
+          Size="154,42"
           Id="Package\For each HSBC Position file\Audit Start Task"
           TopLeft="67.9166666666667,21" />
         <NodeLayout
-          Size="169.6,41.6"
+          Size="170,42"
           Id="Package\For each HSBC Position file\Get File Meta Data"
           TopLeft="62.9166666666666,100.4" />
         <NodeLayout
-          Size="204.8,41.6"
+          Size="205,42"
           Id="Package\For each HSBC Position file\Load HSBC Positions to DV"
           TopLeft="48.9166666666666,456" />
         <NodeLayout
-          Size="193.6,41.6"
+          Size="194,42"
           Id="Package\For each HSBC Position file\Load Stg HSBC Positions"
           TopLeft="49.9166666666666,312.6" />
         <NodeLayout
-          Size="196.8,41.6"
+          Size="197,42"
           Id="Package\For each HSBC Position file\Load tmp HSBC Positions"
           TopLeft="48.4166666666666,241.2" />
         <NodeLayout
-          Size="216,41.6"
+          Size="216,42"
           Id="Package\For each HSBC Position file\Truncate tmp HSBC Positions"
           TopLeft="39.9166666666666,171.8" />
         <EdgeLayout
@@ -4258,7 +4258,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="146.416666666667,63">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,37.4"
               Start="0,0"
               End="0,29.9">
@@ -4280,7 +4280,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="147.916666666667,142.4">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,29.4"
               Start="0,0"
               End="0,21.9">
@@ -4302,7 +4302,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="147.416666666667,213.8">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,27.4"
               Start="0,0"
               End="0,19.9">
@@ -4324,7 +4324,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="146.916666666667,283.2">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,29.3999999999999"
               Start="0,0"
               End="0,21.8999999999999">
@@ -4346,7 +4346,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="146.916666666667,354.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,29.4"
               Start="0,0"
               End="0,21.9">
@@ -4368,7 +4368,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="149.166666666667,426">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,30"
               Start="0,0"
               End="0,22.5">
@@ -4390,7 +4390,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="151.333338207255,498">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,34.7777777777781"
               Start="0,0"
               End="0,27.2777777777781">
@@ -4410,12 +4410,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="286.4,596"
-          Size="286.4,639.2"
+          PanelSize="286,596"
+          Size="286,639"
           Id="Package\For each HSBC Position file"
           TopLeft="558,25" />
         <NodeLayout
-          Size="168.8,41.6"
+          Size="169,42"
           Id="Package\Set Load DateTime"
           TopLeft="246.0952380628,249.039215714874" />
         <EdgeLayout
@@ -4423,7 +4423,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="328.5476190314,216.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,32.4392157148737"
               Start="0,0"
               End="0,24.9392157148737">
@@ -4442,42 +4442,42 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="338.972222151856,414">
+          TopLeft="326.972222151856,412">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,246.65001106242"
+              StartConnector="{x:Null}"
+              EndConnector="0,249.65001106242"
               Start="0,0"
-              End="0,239.15001106242">
+              End="0,242.15001106242">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,239.15001106242" />
+                    End="0,242.15001106242" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-15.24134765625,114.70049381246,30.4826953125,9.7490234375"
+              BoundingBox="-15.24134765625,116.20049381246,30.4826953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="703.833333333333,664">
+          TopLeft="700.5,664">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,62"
+              StartConnector="{x:Null}"
+              EndConnector="0,35"
               Start="0,0"
-              End="0,54.5">
+              End="0,27.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.5" />
+                    End="0,27.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4491,7 +4491,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="182,107">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="-82,64"
               Start="0,0"
               End="-82,56.5">
@@ -4524,46 +4524,46 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="663.333333333333,726">
+          TopLeft="631,720">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-298.888889029621,-23.34998893758"
+              StartConnector="{x:Null}"
+              EndConnector="-219.555555696288,-31.6833222709133"
               Start="0,0"
-              End="-298.888889029621,-15.84998893758">
+              End="-212.055555696288,-31.6833222709133">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-7.70361932841081" />
+                    End="-122.899082650148,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-7.70361932841081"
-                    Point2="0,-11.7036193284108"
-                    Point3="-4,-11.7036193284108" />
+                    Point1="-122.899082650148,0"
+                    Point2="-126.899082650148,0"
+                    Point3="-126.899082650148,-4" />
                   <mssgle:LineSegment
-                    End="-294.888889029621,-11.7036193284108" />
+                    End="-126.899082650148,-27.6833222709133" />
                   <mssgle:CubicBezierSegment
-                    Point1="-294.888889029621,-11.7036193284108"
-                    Point2="-298.888889029621,-11.7036193284108"
-                    Point3="-298.888889029621,-15.7036193284108" />
+                    Point1="-126.899082650148,-27.6833222709133"
+                    Point2="-126.899082650148,-31.6833222709133"
+                    Point3="-130.899082650148,-31.6833222709133" />
                   <mssgle:LineSegment
-                    End="-298.888889029621,-15.84998893758" />
+                    End="-212.055555696288,-31.6833222709133" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-174.748897639811,-6.7036193284108,50.60890625,11.609375"
+              BoundingBox="-152.203535775148,1,50.60890625,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="308.972222151856,702.65001106242">
+          TopLeft="329.722222151856,703.65001106242">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,61.166666627923"
               Start="0,0"
               End="0,53.666666627923">
@@ -4587,7 +4587,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="251,107">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="75.5,68"
               Start="0,0"
               End="75.5,60.5">
@@ -4623,7 +4623,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="184,194">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="57,0"
               Start="0,0"
               End="49.5,0">
@@ -4642,30 +4642,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="330.4952380628,290.639215714874">
+          TopLeft="328.2976190314,291.039215714874">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="9.50476193719976,81.3607842851263"
+              StartConnector="{x:Null}"
+              EndConnector="0,78.960784285126"
               Start="0,0"
-              End="9.50476193719976,73.8607842851263">
+              End="0,71.460784285126">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.6803921425631" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,36.6803921425631"
-                    Point2="0,40.6803921425631"
-                    Point3="4,40.6803921425631" />
-                  <mssgle:LineSegment
-                    End="5.50476193719976,40.6803921425631" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5.50476193719976,40.6803921425631"
-                    Point2="9.50476193719976,40.6803921425631"
-                    Point3="9.50476193719976,44.6803921425631" />
-                  <mssgle:LineSegment
-                    End="9.50476193719976,73.8607842851263" />
+                    End="0,71.460784285126" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4679,63 +4667,63 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="558,449.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-136.555555696288,231.983344395753"
+              StartConnector="{x:Null}"
+              EndConnector="-146.555555696288,227.316677729087"
               Start="0,0"
-              End="-129.055555696288,231.983344395753">
+              End="-139.055555696288,227.316677729087">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-50.8268637606701,0" />
+                    End="-66.1751655520204,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-50.8268637606701,0"
-                    Point2="-54.8268637606701,0"
-                    Point3="-54.8268637606701,4" />
+                    Point1="-66.1751655520204,0"
+                    Point2="-70.1751655520204,0"
+                    Point3="-70.1751655520204,4" />
                   <mssgle:LineSegment
-                    End="-54.8268637606701,227.983344395753" />
+                    End="-70.1751655520204,223.316677729087" />
                   <mssgle:CubicBezierSegment
-                    Point1="-54.8268637606701,227.983344395753"
-                    Point2="-54.8268637606701,231.983344395753"
-                    Point3="-58.8268637606701,231.983344395753" />
+                    Point1="-70.1751655520204,223.316677729087"
+                    Point2="-70.1751655520204,227.316677729087"
+                    Point3="-74.1751655520204,227.316677729087" />
                   <mssgle:LineSegment
-                    End="-129.055555696288,231.983344395753" />
+                    End="-139.055555696288,227.316677729087" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-70.0682114169201,-15.7490234375,30.4826953125,9.7490234375"
+              BoundingBox="-85.4165132082704,-15.7490234375,30.4826953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="436,393">
+          TopLeft="422,391">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="122,-153.666666666667"
+              StartConnector="{x:Null}"
+              EndConnector="136,-151.666666666667"
               Start="0,0"
-              End="114.5,-153.666666666667">
+              End="128.5,-151.666666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="69.0171714018108,0" />
+                    End="77.3961910708711,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="69.0171714018108,0"
-                    Point2="73.0171714018108,0"
-                    Point3="73.0171714018108,-4" />
+                    Point1="77.3961910708711,0"
+                    Point2="81.3961910708711,0"
+                    Point3="81.3961910708711,-4" />
                   <mssgle:LineSegment
-                    End="73.0171714018108,-149.666666666667" />
+                    End="81.3961910708711,-147.666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="73.0171714018108,-149.666666666667"
-                    Point2="73.0171714018108,-153.666666666667"
-                    Point3="77.0171714018108,-153.666666666667" />
+                    Point1="81.3961910708711,-147.666666666667"
+                    Point2="81.3961910708711,-151.666666666667"
+                    Point3="85.3961910708711,-151.666666666667" />
                   <mssgle:LineSegment
-                    End="114.5,-153.666666666667" />
+                    End="128.5,-151.666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4763,21 +4751,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\For each HSBC Position file\Load tmp HSBC Positions">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="192.8,41.6"
+          Size="193,42"
           Id="Package\For each HSBC Position file\Load tmp HSBC Positions\tmp HSBC_Net Positions"
           TopLeft="129,391" />
         <NodeLayout
-          Size="198.4,41.6"
+          Size="198,42"
           Id="Package\For each HSBC Position file\Load tmp HSBC Positions\Load HSBC_Net Positions"
           TopLeft="119,99" />
         <NodeLayout
-          Size="180,41.6"
+          Size="180,42"
           Id="Package\For each HSBC Position file\Load tmp HSBC Positions\Add Derived Columns"
           TopLeft="136,289" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\For each HSBC Position file\Load tmp HSBC Positions\Row Count"
           TopLeft="160,196" />
         <EdgeLayout
@@ -4785,7 +4773,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="225.5,238">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,51"
               Start="0,0"
               End="0,43.5">
@@ -4807,7 +4795,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="221.5,141">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,55"
               Start="0,0"
               End="0,47.5">
@@ -4829,7 +4817,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="225.75,331">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">

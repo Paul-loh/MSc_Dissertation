@@ -4,6 +4,8 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
+        <ServerName>PAULS-PC</ServerName>
+        <PathOnServer>/SSISDB/BI_POC/DWH_Integration</PathOnServer>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>

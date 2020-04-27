@@ -7,12 +7,12 @@
   DTS:CreatorName="CALEDONIA\Paul.Loh"
   DTS:DTSID="{2146AFD8-C319-4856-89DF-C586751B60B3}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.71"
+  DTS:LastModifiedProductVersion="15.0.2000.93"
   DTS:LocaleID="2057"
   DTS:ObjectName="Load Business Vault Holdings"
   DTS:PackageType="5"
-  DTS:VersionBuild="275"
-  DTS:VersionGUID="{A2A33C97-56E0-4FAC-A9B0-3DC00B9D32AA}">
+  DTS:VersionBuild="285"
+  DTS:VersionGUID="{7389AC90-A3C7-4C42-A177-4CD8AC7B9DE4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -463,204 +463,6 @@
       </DTS:EventHandlers>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Business Vault Security Holdings"
-      DTS:CreationName="STOCK:SEQUENCE"
-      DTS:Description="Sequence Container"
-      DTS:Disabled="True"
-      DTS:DTSID="{eacda145-fd1b-46a0-af0c-01a3ac755d3f}"
-      DTS:ExecutableType="STOCK:SEQUENCE"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Business Vault Security Holdings">
-      <DTS:Variables />
-      <DTS:Executables>
-        <DTS:Executable
-          DTS:refId="Package\Business Vault Security Holdings\Audit End Task"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Execute SQL Task"
-          DTS:DTSID="{82fad9ef-ed88-49ee-9e49-a9c6d4d825c3}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Audit End Task"
-          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{A5EB1396-3C68-4D6A-9CF4-C8E9CA4E9195}"
-              SQLTask:SqlStatementSource="exec audit.EndTask ?, 1, ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-              <SQLTask:ParameterBinding
-                SQLTask:ParameterName="0"
-                SQLTask:DtsVariableName="User::ETLTaskID"
-                SQLTask:ParameterDirection="Input"
-                SQLTask:DataType="3"
-                SQLTask:ParameterSize="-1" />
-              <SQLTask:ParameterBinding
-                SQLTask:ParameterName="1"
-                SQLTask:DtsVariableName="User::RowCount"
-                SQLTask:ParameterDirection="Input"
-                SQLTask:DataType="3"
-                SQLTask:ParameterSize="-1" />
-            </SQLTask:SqlTaskData>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Business Vault Security Holdings\Audit Start Task"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Execute SQL Task"
-          DTS:DTSID="{4c47d209-36f1-4ab7-878d-deb60cc3a573}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Audit Start Task"
-          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{A5EB1396-3C68-4D6A-9CF4-C8E9CA4E9195}"
-              SQLTask:BypassPrepare="False"
-              SQLTask:SqlStatementSource="exec audit.StartTask ?, &quot;Calculate Pacer Business Vault Security Holdings&quot;, &quot;Data Vault Tables&quot;, &quot;bv.LinkSecuritySummary; bv.SatSecurityValuations; bv.SatSecurityHoldings&quot;, ? out" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-              <SQLTask:ParameterBinding
-                SQLTask:ParameterName="0"
-                SQLTask:DtsVariableName="User::ETLPackageID"
-                SQLTask:ParameterDirection="Input"
-                SQLTask:DataType="3"
-                SQLTask:ParameterSize="-1" />
-              <SQLTask:ParameterBinding
-                SQLTask:ParameterName="1"
-                SQLTask:DtsVariableName="User::ETLTaskID"
-                SQLTask:ParameterDirection="Output"
-                SQLTask:DataType="3"
-                SQLTask:ParameterSize="-1" />
-            </SQLTask:SqlTaskData>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Business Vault Security Holdings\Load Business Vault Security Values"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Execute SQL Task"
-          DTS:DTSID="{c16f4edb-b3a2-47b6-8341-a66d7a38f16d}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Load Business Vault Security Values"
-          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{A5EB1396-3C68-4D6A-9CF4-C8E9CA4E9195}"
-              SQLTask:BypassPrepare="False"
-              SQLTask:SqlStatementSource="exec etl.PACER_LoadBVSecuritySummary ?, ?, ?, ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-              <SQLTask:ParameterBinding
-                SQLTask:ParameterName="0"
-                SQLTask:DtsVariableName="User::DateReport"
-                SQLTask:ParameterDirection="Input"
-                SQLTask:DataType="133"
-                SQLTask:ParameterSize="-1" />
-              <SQLTask:ParameterBinding
-                SQLTask:ParameterName="1"
-                SQLTask:DtsVariableName="User::DateTimeLoad"
-                SQLTask:ParameterDirection="Input"
-                SQLTask:DataType="145"
-                SQLTask:ParameterSize="-1" />
-              <SQLTask:ParameterBinding
-                SQLTask:ParameterName="2"
-                SQLTask:DtsVariableName="User::DateTimeAsOf"
-                SQLTask:ParameterDirection="Input"
-                SQLTask:DataType="145"
-                SQLTask:ParameterSize="-1" />
-              <SQLTask:ParameterBinding
-                SQLTask:ParameterName="3"
-                SQLTask:DtsVariableName="$Package::ETLProcessID"
-                SQLTask:ParameterDirection="Input"
-                SQLTask:DataType="3"
-                SQLTask:ParameterSize="-1" />
-            </SQLTask:SqlTaskData>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Business Vault Security Holdings\reset rowCount"
-          DTS:CreationName="Microsoft.ExpressionTask"
-          DTS:Description="Expression Task"
-          DTS:DTSID="{910325fb-34f1-4847-9059-bb2625e57273}"
-          DTS:ExecutableType="Microsoft.ExpressionTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="reset rowCount"
-          DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <ExpressionTask
-              Expression="@[User::RowCount] = 0" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-      </DTS:Executables>
-      <DTS:PrecedenceConstraints>
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Business Vault Security Holdings.PrecedenceConstraints[Constraint]"
-          DTS:CreationName=""
-          DTS:DTSID="{43839a9c-7b4e-4077-8386-a22bf3bbfbb5}"
-          DTS:From="Package\Business Vault Security Holdings\Audit Start Task"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint"
-          DTS:To="Package\Business Vault Security Holdings\Load Business Vault Security Values" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Business Vault Security Holdings.PrecedenceConstraints[Constraint 3]"
-          DTS:CreationName=""
-          DTS:DTSID="{8e9d1f0e-68b1-4bad-b08a-195e86d61375}"
-          DTS:From="Package\Business Vault Security Holdings\Load Business Vault Security Values"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 3"
-          DTS:To="Package\Business Vault Security Holdings\Audit End Task" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Business Vault Security Holdings.PrecedenceConstraints[Constraint 4]"
-          DTS:CreationName=""
-          DTS:DTSID="{01aaa9f9-0635-4a4c-a395-969912845204}"
-          DTS:From="Package\Business Vault Security Holdings\Audit End Task"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 4"
-          DTS:To="Package\Business Vault Security Holdings\reset rowCount" />
-      </DTS:PrecedenceConstraints>
-      <DTS:EventHandlers>
-        <DTS:EventHandler
-          DTS:refId="Package\Business Vault Security Holdings.EventHandlers[OnError]"
-          DTS:CreationName="OnError"
-          DTS:DTSID="{E192E799-6C2D-458C-9414-6137157AEEAA}"
-          DTS:EventID="0"
-          DTS:EventName="OnError"
-          DTS:LocaleID="-1">
-          <DTS:Variables>
-            <DTS:Variable
-              DTS:CreationName=""
-              DTS:Description="The propagate property of the event"
-              DTS:DTSID="{639BD6C5-49E2-4735-84A1-B36FC6900228}"
-              DTS:IncludeInDebugDump="6789"
-              DTS:Namespace="System"
-              DTS:ObjectName="Propagate">
-              <DTS:VariableValue
-                DTS:DataType="11">-1</DTS:VariableValue>
-            </DTS:Variable>
-          </DTS:Variables>
-          <DTS:Executables>
-            <DTS:Executable
-              DTS:refId="Package\Business Vault Security Holdings.EventHandlers[OnError]\Capture OnError Event Details"
-              DTS:CreationName="Microsoft.ExpressionTask"
-              DTS:Description="Expression Task"
-              DTS:DTSID="{a31e76ec-cc94-4966-853b-2b4722443d37}"
-              DTS:ExecutableType="Microsoft.ExpressionTask"
-              DTS:LocaleID="-1"
-              DTS:ObjectName="Capture OnError Event Details"
-              DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-              <DTS:Variables />
-              <DTS:ObjectData>
-                <ExpressionTask
-                  Expression="@[User::ErrorMessage] =  &quot;\r\n&quot; + &quot;Error code: &quot; + (DT_WSTR, 255) @[System::ErrorCode] + &quot;\r\n&quot; + &quot;Error Description: &quot; + @[System::ErrorDescription]  + @[User::ErrorMessage]" />
-              </DTS:ObjectData>
-            </DTS:Executable>
-          </DTS:Executables>
-        </DTS:EventHandler>
-      </DTS:EventHandlers>
-    </DTS:Executable>
-    <DTS:Executable
       DTS:refId="Package\Check Input Parameters"
       DTS:CreationName="Microsoft.ScriptTask"
       DTS:Description="Script Task"
@@ -679,14 +481,35 @@
           ReadOnlyVariables="User::DateReport,User::DateTimeAsOf,User::DateTimeLoad"
           ReadWriteVariables="User::ErrorMessage">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_7dbadf5e6d1542b494b92deaf0dd62cc")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_7dbadf5e6d1542b494b92deaf0dd62cc")]
+[assembly: AssemblyCopyright("Copyright @  2018")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1211,35 +1034,14 @@ namespace ST_7dbadf5e6d1542b494b92deaf0dd62cc.Properties {
   </ProjectExtensions>
 </Project>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_7dbadf5e6d1542b494b92deaf0dd62cc")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_7dbadf5e6d1542b494b92deaf0dd62cc")]
-[assembly: AssemblyCopyright("Copyright @  2018")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -1569,22 +1371,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:ObjectName="Constraint 10"
       DTS:To="Package\Audit End Process" />
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 11]"
-      DTS:CreationName=""
-      DTS:DTSID="{8AC568DE-5BC7-40E3-9480-CC33B798B79A}"
-      DTS:From="Package\Business Vault Portfolio-Security Holdings"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 11"
-      DTS:To="Package\Business Vault Security Holdings" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 12]"
-      DTS:CreationName=""
-      DTS:DTSID="{FDBF811E-B187-46CD-AD9B-4F3024B8D710}"
-      DTS:From="Package\Business Vault Security Holdings"
-      DTS:ObjectName="Constraint 12"
-      DTS:To="Package\Audit End Package"
-      DTS:Value="2" />
-    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
       DTS:DTSID="{2071337e-3654-4ffb-8f93-6a7e592d08c1}"
@@ -1632,7 +1418,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:From="Package\Business Vault Portfolio-Security Holdings"
       DTS:ObjectName="Constraint 7"
       DTS:To="Package\Audit End Package"
-      DTS:Value="1" />
+      DTS:Value="2" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
       DTS:CreationName=""
@@ -1684,23 +1470,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="167,42"
           Id="Package\Audit End Package"
-          TopLeft="608,747" />
+          TopLeft="287.305555565904,552" />
         <NodeLayout
           Size="163,42"
           Id="Package\Audit End Process"
-          TopLeft="606,840.91666666667" />
+          TopLeft="282.305555565904,653.91666666667" />
         <NodeLayout
           Size="171,42"
           Id="Package\Audit Start Package"
-          TopLeft="226,119" />
+          TopLeft="226,113" />
         <NodeLayout
           Size="168,42"
           Id="Package\Audit Start Process"
-          TopLeft="8,119" />
+          TopLeft="8,113" />
         <NodeLayout
           Size="150,42"
           Id="Package\Business Vault Portfolio-Security Holdings\Audit End Task"
@@ -1786,128 +1572,39 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="313,318"
-          Size="313,361"
+          PanelSize="313,280"
+          Size="313,323"
           Id="Package\Business Vault Portfolio-Security Holdings"
-          TopLeft="530,11" />
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Business Vault Security Holdings\Audit End Task"
-          TopLeft="58,143" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Business Vault Security Holdings\Audit Start Task"
-          TopLeft="57,5" />
-        <NodeLayout
-          Size="248,42"
-          Id="Package\Business Vault Security Holdings\Load Business Vault Security Values"
-          TopLeft="8,70" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Business Vault Security Holdings\reset rowCount"
-          TopLeft="60,211" />
-        <EdgeLayout
-          Id="Package\Business Vault Security Holdings.PrecedenceConstraints[Constraint]"
-          TopLeft="133,47">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,23"
-              Start="0,0"
-              End="0,15.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Business Vault Security Holdings.PrecedenceConstraints[Constraint 3]"
-          TopLeft="132.5,112">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,31"
-              Start="0,0"
-              End="0,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Business Vault Security Holdings.PrecedenceConstraints[Constraint 4]"
-          TopLeft="134.25,185">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,26"
-              Start="0,0"
-              End="0,18.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="263,259"
-          Size="263,302"
-          Id="Package\Business Vault Security Holdings"
-          TopLeft="753,388" />
+          TopLeft="527,345" />
         <NodeLayout
           Size="192,45"
           Id="Package\Check Input Parameters"
-          TopLeft="413.480154595382,426.071444162726" />
+          TopLeft="269.305555565904,420.071444162726" />
         <NodeLayout
           Size="215,42"
           Id="Package\Check Parent ETL Process ID"
-          TopLeft="87,28" />
+          TopLeft="87,22" />
         <NodeLayout
           Size="168,42"
           Id="Package\Set AsOf DateTime"
-          TopLeft="322,271" />
+          TopLeft="293.305555565904,265" />
         <NodeLayout
           Size="169,42"
           Id="Package\Set Load DateTime"
-          TopLeft="269.305555565904,191.27777686086" />
+          TopLeft="292.305555565904,185.27777686086" />
         <NodeLayout
           Size="177,42"
           Id="Package\Set Report DateTime"
-          TopLeft="347,352.91666666667" />
+          TopLeft="284.305555565904,346.91666666667" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="311.5,161">
+          TopLeft="311.5,155">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="42.305555565904,30.27777686086"
+              EndConnector="65.305555565904,30.27777686086"
               Start="0,0"
-              End="42.305555565904,22.77777686086">
+              End="65.305555565904,22.77777686086">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1918,13 +1615,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                     Point2="0,15.13888843043"
                     Point3="4,15.13888843043" />
                   <mssgle:LineSegment
-                    End="38.305555565904,15.13888843043" />
+                    End="61.305555565904,15.13888843043" />
                   <mssgle:CubicBezierSegment
-                    Point1="38.305555565904,15.13888843043"
-                    Point2="42.305555565904,15.13888843043"
-                    Point3="42.305555565904,19.13888843043" />
+                    Point1="61.305555565904,15.13888843043"
+                    Point2="65.305555565904,15.13888843043"
+                    Point3="65.305555565904,19.13888843043" />
                   <mssgle:LineSegment
-                    End="42.305555565904,22.77777686086" />
+                    End="65.305555565904,22.77777686086" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1935,7 +1632,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="229,70">
+          TopLeft="229,64">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -1971,95 +1668,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="689.5,789">
+          TopLeft="367.305555565904,594">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="0,51.91666666667"
+              EndConnector="0,59.91666666667"
               Start="0,0"
-              End="0,44.41666666667">
+              End="0,52.41666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.41666666667" />
+                    End="0,52.41666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-8,14.208333333335,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="843,191.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="41.5,196.5"
-              Start="0,0"
-              End="41.5,189">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="37.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="37.5,0"
-                    Point2="41.5,0"
-                    Point3="41.5,4" />
-                  <mssgle:LineSegment
-                    End="41.5,189" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="884.5,690">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="-153.25,57"
-              Start="0,0"
-              End="-153.25,49.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.4027504911591" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,33.4027504911591"
-                    Point2="0,37.4027504911591"
-                    Point3="-4,37.4027504911591" />
-                  <mssgle:LineSegment
-                    End="-149.25,37.4027504911591" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-149.25,37.4027504911591"
-                    Point2="-153.25,37.4027504911591"
-                    Point3="-153.25,41.4027504911591" />
-                  <mssgle:LineSegment
-                    End="-153.25,49.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-101.929453125,42.4027504911591,50.60890625,11.609375"
+              BoundingBox="-8,18.208333333335,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="160,70">
+          TopLeft="160,64">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -2095,7 +1728,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="176,140">
+          TopLeft="176,134">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -2117,30 +1750,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="353.805555565904,233.27777686086">
+          TopLeft="377.055555565904,227.27777686086">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="52.194444434096,37.72222313914"
+              EndConnector="0,37.72222313914"
               Start="0,0"
-              End="52.194444434096,30.22222313914">
+              End="0,30.22222313914">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.86111156957" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.86111156957"
-                    Point2="0,18.86111156957"
-                    Point3="4,18.86111156957" />
-                  <mssgle:LineSegment
-                    End="48.194444434096,18.86111156957" />
-                  <mssgle:CubicBezierSegment
-                    Point1="48.194444434096,18.86111156957"
-                    Point2="52.194444434096,18.86111156957"
-                    Point3="52.194444434096,22.86111156957" />
-                  <mssgle:LineSegment
-                    End="52.194444434096,30.22222313914" />
+                    End="0,30.22222313914" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2151,30 +1772,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="540.146821262049,426.071444162726">
+          TopLeft="461.305555565904,442.571444162726">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="95.519845404618,-54.071444162726"
+              EndConnector="65.694444434096,11.428555837274"
               Start="0,0"
-              End="95.519845404618,-46.571444162726">
+              End="58.194444434096,11.428555837274">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-23.1427924957853" />
+                    End="35.22237625178,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-23.1427924957853"
-                    Point2="0,-27.1427924957853"
-                    Point3="4,-27.1427924957853" />
+                    Point1="35.22237625178,0"
+                    Point2="39.22237625178,0"
+                    Point3="39.22237625178,4" />
                   <mssgle:LineSegment
-                    End="91.519845404618,-27.1427924957853" />
+                    End="39.22237625178,7.42855583727402" />
                   <mssgle:CubicBezierSegment
-                    Point1="91.519845404618,-27.1427924957853"
-                    Point2="95.519845404618,-27.1427924957853"
-                    Point3="95.519845404618,-31.1427924957853" />
+                    Point1="39.22237625178,7.42855583727402"
+                    Point2="39.22237625178,11.428555837274"
+                    Point3="43.22237625178,11.428555837274" />
                   <mssgle:LineSegment
-                    End="95.519845404618,-46.571444162726" />
+                    End="58.194444434096,11.428555837274" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2185,102 +1806,78 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="509.480154595382,471.071444162726">
+          TopLeft="368.055555565904,465.071444162726">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="142.269845404618,275.928555837274"
+              EndConnector="0,86.928555837274"
               Start="0,0"
-              End="142.269845404618,268.428555837274">
+              End="0,79.428555837274">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,177.061174164341" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,177.061174164341"
-                    Point2="0,181.061174164341"
-                    Point3="4,181.061174164341" />
-                  <mssgle:LineSegment
-                    End="138.269845404618,181.061174164341" />
-                  <mssgle:CubicBezierSegment
-                    Point1="138.269845404618,181.061174164341"
-                    Point2="142.269845404618,181.061174164341"
-                    Point3="142.269845404618,185.061174164341" />
-                  <mssgle:LineSegment
-                    End="142.269845404618,268.428555837274" />
+                    End="0,79.428555837274" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="55.893575046059,186.061174164341,30.4826953125,9.7490234375"
+              BoundingBox="-15.24134765625,34.839766199887,30.4826953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="737.333333333333,372">
+          TopLeft="527,559">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="-45.8333333333333,375"
+              EndConnector="-72.694444434096,14"
               Start="0,0"
-              End="-45.8333333333333,367.5">
+              End="-65.194444434096,14">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,147.144310235219" />
+                    End="-25.2927705852734,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,147.144310235219"
-                    Point2="0,151.144310235219"
-                    Point3="-4,151.144310235219" />
+                    Point1="-25.2927705852734,0"
+                    Point2="-29.2927705852734,0"
+                    Point3="-29.2927705852734,4" />
                   <mssgle:LineSegment
-                    End="-41.8333333333333,151.144310235219" />
+                    End="-29.2927705852734,10" />
                   <mssgle:CubicBezierSegment
-                    Point1="-41.8333333333333,151.144310235219"
-                    Point2="-45.8333333333333,151.144310235219"
-                    Point3="-45.8333333333333,155.144310235219" />
+                    Point1="-29.2927705852734,10"
+                    Point2="-29.2927705852734,14"
+                    Point3="-33.2927705852734,14" />
                   <mssgle:LineSegment
-                    End="-45.8333333333333,367.5" />
+                    End="-65.194444434096,14" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-38.1580143229166,156.144310235219,30.4826953125,9.7490234375"
+              BoundingBox="-54.5972237102734,-17.609375,50.60890625,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="435.5,394.91666666667">
+          TopLeft="369.055555565904,388.91666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="43.3134879287152,31.154777496056"
+              EndConnector="0,31.154777496056"
               Start="0,0"
-              End="43.3134879287152,23.654777496056">
+              End="0,23.654777496056">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.5383799976532" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.5383799976532"
-                    Point2="0,18.5383799976532"
-                    Point3="4,18.5383799976532" />
-                  <mssgle:LineSegment
-                    End="39.3134879287152,18.5383799976532" />
-                  <mssgle:CubicBezierSegment
-                    Point1="39.3134879287152,18.5383799976532"
-                    Point2="43.3134879287152,18.5383799976532"
-                    Point3="43.3134879287152,22.5383799976532" />
-                  <mssgle:LineSegment
-                    End="43.3134879287152,23.654777496056" />
+                    End="0,23.654777496056" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2291,30 +1888,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="406,313">
+          TopLeft="375.055555565904,307">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="29.5,39.91666666667"
+              EndConnector="0,39.91666666667"
               Start="0,0"
-              End="29.5,32.41666666667">
+              End="0,32.41666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.958333333335" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.958333333335"
-                    Point2="0,19.958333333335"
-                    Point3="4,19.958333333335" />
-                  <mssgle:LineSegment
-                    End="25.5,19.958333333335" />
-                  <mssgle:CubicBezierSegment
-                    Point1="25.5,19.958333333335"
-                    Point2="29.5,19.958333333335"
-                    Point3="29.5,23.958333333335" />
-                  <mssgle:LineSegment
-                    End="29.5,32.41666666667" />
+                    End="0,32.41666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2347,18 +1932,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Size="221,42"
           Id="Package\Business Vault Portfolio-Security Holdings.EventHandlers[OnError]\Capture OnError Event Details"
           TopLeft="72,54" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
-  <DtsEventHandler
-    design-time-name="Package\Business Vault Security Holdings.EventHandlers[OnError]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="221,42"
-          Id="Package\Business Vault Security Holdings.EventHandlers[OnError]\Capture OnError Event Details"
-          TopLeft="93,56" />
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>

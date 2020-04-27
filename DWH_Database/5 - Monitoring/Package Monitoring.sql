@@ -29,13 +29,9 @@ ORDER BY	pr.ETLProcessID DESC
 
 
 
-
-
-
 SELECT * FROM [audit].[Process] ORDER BY [ETLProcessID] DESC;
 
 SELECT * FROM [audit].[Package] ORDER BY [ETLProcessID] DESC, [ETLPackageID] DESC;
-
 
 SELECT * FROM [audit].[Process] ORDER BY [ETLProcessID] DESC;
 

@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\DWH_Database",
-    "\\DWH_Database\\obj"
+    "\\DWH_Database\\obj",
+    "\\DWH_Integration"
   ],
-  "SelectedNode": "\\DWH_Database\\obj",
+  "SelectedNode": "\\DWH_Integration\\Project.params",
   "PreviewInSolutionExplorer": false
 }

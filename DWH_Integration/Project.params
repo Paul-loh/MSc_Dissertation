@@ -416,7 +416,7 @@
         SSIS:Name="Sensitive">1</SSIS:Property>
       <SSIS:Property
         SSIS:Name="Value"
-        SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiehmogqeX0els8nQx+3m4wAAAAACAAAAAAAQZgAAAAEAACAAAAAgbD1W92FkZlA/RD2dZiFW5s7kvFRRzVxdqEv5YLab/AAAAAAOgAAAAAIAACAAAAD7sKuL6dVpG7KavLfy/nItNeeygIt+hD6wtFH5fr1xUIAAAABDhzSEk78MPDsybfZFJkEeE7AWgyxfKtPISQ5dZBhIBMLoDOItdd9lH8lWW/ibg9iiA9UCqtHVI8PJin/YVG0O8b4OmeLZLdGWSz5YLyHPwxPtR/uIxST2XGiAkbDSzVUTRrtXknfOu2slISTpdtIr4RHiHKgqft0rDSDaPzsx90AAAABmjpfyI5gt2ftu1w/wDvMx+9XwnZSrGPGH8f8k/eLK7cOowkwk4hstb+vvSL4FtJaERise2div4aKrPosljXNV</SSIS:Property>
+        SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYOU+UZGcl0+Ztd5+v9eJkQAAAAACAAAAAAAQZgAAAAEAACAAAACpbY5jKSsZpOCfTDITj4Gp73SCtFbBo7VNf2jkigzIegAAAAAOgAAAAAIAACAAAAAgsl+ZNjhjFp49dzOKdk7XPVGt5TDs3AilKiSr/AINX5AAAADj5eQriumE+k6mEtVnfDZF9dmRWPqwSF4lTMKXKClJydTh5jyx8LGcMl4c9Epfy20ieCGtB+VQh4iHPY9bENPKWabIjl00/CLPJG9l/1VrZ210n9i9XavkvAE+LZtXfKJ0+5gS66PGnLha2t09hh+V0IM2G9CU5bzUVeYJH3b5294MrS3rX4YM6nnoB7p5wpJAAAAASuVHSrVUvkc5ZLWxznDv1XzUTSOZwcaD6zK9FwPw/8iSvfS0vK3yw9htz7qvi6KTez6tl5wjWPRxBJH1pMX6Aw==</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -716,27 +716,6 @@
     </SSIS:Properties>
   </SSIS:Parameter>
   <SSIS:Parameter
-    SSIS:Name="PathArchive_LPANALYST">
-    <SSIS:Properties>
-      <SSIS:Property
-        SSIS:Name="ID">{c6ed3050-29b5-4cfe-8aec-bfd5928b6809}</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="CreationName"></SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Description">Source System code: LPANALYST. Archive directory.</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Required">0</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Sensitive">0</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Value">D:\systems\Integration\Dev\Archive\LPANALYST\</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="DataType">18</SSIS:Property>
-    </SSIS:Properties>
-  </SSIS:Parameter>
-  <SSIS:Parameter
     SSIS:Name="PathArchive_MANUAL">
     <SSIS:Properties>
       <SSIS:Property
@@ -779,69 +758,6 @@
     </SSIS:Properties>
   </SSIS:Parameter>
   <SSIS:Parameter
-    SSIS:Name="FileIn_LPANALYST_DWCAPA">
-    <SSIS:Properties>
-      <SSIS:Property
-        SSIS:Name="ID">{bf9901a3-589b-4bbb-8c5d-8fa43d16af49}</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="CreationName"></SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Description">Record source code: LPANALYST.CAPACC. LP Analyst Capital Accounts.</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Required">0</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Sensitive">0</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Value">D:\systems\Integration\Dev\InputFiles\LPANALYST\DWH\DWCapitalAccounts.csv</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="DataType">18</SSIS:Property>
-    </SSIS:Properties>
-  </SSIS:Parameter>
-  <SSIS:Parameter
-    SSIS:Name="FileIn_LPANALYST_DWCASH">
-    <SSIS:Properties>
-      <SSIS:Property
-        SSIS:Name="ID">{013b86fe-3554-43a3-a212-a2f7da53af9e}</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="CreationName"></SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Description">Record source code: LPANALYST.CASHFLOW. LP Analyst Cash Flow Data.</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Required">0</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Sensitive">0</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Value">D:\systems\Integration\Dev\InputFiles\LPANALYST\DWH\DWCashFlowData.csv</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="DataType">18</SSIS:Property>
-    </SSIS:Properties>
-  </SSIS:Parameter>
-  <SSIS:Parameter
-    SSIS:Name="FileIn_LPANALYST_DWCOMP">
-    <SSIS:Properties>
-      <SSIS:Property
-        SSIS:Name="ID">{883181ea-5b91-481b-8f85-8ab24e6d9940}</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="CreationName"></SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Description">Record source code: LPANALYST.COMPDAT. LP Analyst Company Data.</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Required">0</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Sensitive">0</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Value">D:\systems\Integration\Dev\InputFiles\LPANALYST\DWH\DWCompanyData.csv</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="DataType">18</SSIS:Property>
-    </SSIS:Properties>
-  </SSIS:Parameter>
-  <SSIS:Parameter
     SSIS:Name="PathInputFolder_HSBC_NET_POSITIONS">
     <SSIS:Properties>
       <SSIS:Property
@@ -879,27 +795,6 @@
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
         SSIS:Name="Value">D:\Systems\Integration\Dev\InputFiles\Pacer\DWH\DWbrok.cus</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="DataType">18</SSIS:Property>
-    </SSIS:Properties>
-  </SSIS:Parameter>
-  <SSIS:Parameter
-    SSIS:Name="FileIn_LPANALYST_DWFUND">
-    <SSIS:Properties>
-      <SSIS:Property
-        SSIS:Name="ID">{7bee5386-f265-4d53-b7d3-5b3ecb63286e}</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="CreationName"></SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Description">Record source code: LPANALYST.FUNDS. LP Analyst Funds.</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Required">0</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Sensitive">0</SSIS:Property>
-      <SSIS:Property
-        SSIS:Name="Value">D:\systems\Integration\Dev\InputFiles\LPANALYST\DWH\DWFunds.csv</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>

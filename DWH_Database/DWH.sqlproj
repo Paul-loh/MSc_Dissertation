@@ -111,7 +111,6 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="1 - Staging Layer - Tables" />
-    <Folder Include="Prototype" />
     <Folder Include="audit" />
     <Folder Include="setup scripts" />
     <Folder Include="tmp" />
@@ -330,12 +329,13 @@
     <Build Include="1 - Staging - ETL Logic\etl.LoadStgPacer_Brokers.sql" />
     <Build Include="2 - Data Vault - ETL Logic\etl.LoadDVPacer_Brokers.sql" />
     <Build Include="4 - InfoMart - FinRep - Stored Procs\InfoMartFinRep.GetDimBrokers.sql" />
+    <None Include="setup scripts\SSIS_CopyEnvironmentVariables.sql" />
+    <None Include="setup scripts\SSIS_CreateOrUpdateEnvironment.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="DWH.refactorlog" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Prototype\Populate Prototype.sql" />
     <None Include="setup scripts\Create DB Roles.sql" />
     <PostDeploy Include="setup scripts\Create Hub Ghost Records.sql" />
     <PreDeploy Include="setup scripts\Create Linked Server - Integration DB.sql" />
