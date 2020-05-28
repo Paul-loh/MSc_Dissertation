@@ -12,5 +12,5 @@
 
     --	UIX		
 	CONSTRAINT [PK_LinkFXRates]		PRIMARY KEY NONCLUSTERED ( [HKeyFXRate] ),		
-	CONSTRAINT [UIX_LinkFXRates]	UNIQUE CLUSTERED ( [HKeyCurrency], [CurrencyCode], [RateDate] )	-- Good practice to add unique index constraint on Business Key columns
+	CONSTRAINT [UIX_LinkFXRates]	UNIQUE CLUSTERED ( [HKeyFXRate], [HKeyCurrency], [CurrencyCode], [RateDate] )	-- Good practice to add unique index constraint on Business Key columns
 )

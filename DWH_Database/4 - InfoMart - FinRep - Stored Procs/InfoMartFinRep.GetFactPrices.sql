@@ -76,12 +76,6 @@ AS
 							INNER JOIN	dv.SatTransactions			st
 							ON			lt.HKeyTransaction			=		st.HKeyTransaction							
 
-							-- AND			st.Meta_LoadEndDateTime		=		N'9999-12-31'
-							--AND			(
-							--				@AsOfDateTime				BETWEEN	st.Meta_LoadDateTime	
-							--											AND		st.Meta_LoadEndDateTime
-							--			)
-							
 							AND			st.Meta_LoadEndDateTime	=	
 										(
 											SELECT	MAX( Meta_LoadEndDateTime )
@@ -91,18 +85,8 @@ AS
 																		AND				st.Meta_LoadEndDateTime
 										)
 										
-							--INNER JOIN	dv.HubSecurities	hs
-							--ON			lt.HKeySecurity				=		hs.HKeySecurity
-
 							INNER JOIN	dv.SatSecurities	ss
 							ON			lt.HKeySecurity				=		ss.HKeySecurity
-
-							-- AND			ss.Meta_LoadEndDateTime		=		N'9999-12-31'
-							--AND			(
-							--				@AsOfDateTime				BETWEEN	ss.Meta_LoadDateTime	
-							--											AND		ss.Meta_LoadEndDateTime
-							--			)
-
 							AND			ss.Meta_LoadEndDateTime	=	
 										(
 											SELECT	MAX( Meta_LoadEndDateTime )
@@ -157,11 +141,6 @@ AS
 							
 						INNER JOIN	dv.SatPrices		sp
 						ON			lp.HKeyPrice		=		sp.HKeyPrice
-						--AND			sp.Meta_LoadEndDateTime		=	N'9999-12-31'
-						--AND			(
-						--				@AsOfDateTime				BETWEEN	sp.Meta_LoadDateTime	
-						--											AND		sp.Meta_LoadEndDateTime
-						--			)
 						AND			sp.Meta_LoadEndDateTime	=	
 									(
 										SELECT	MAX( Meta_LoadEndDateTime )
@@ -170,17 +149,9 @@ AS
 										AND		@AsOfDateTime		BETWEEN			sp.Meta_LoadDateTime	
 																	AND				sp.Meta_LoadEndDateTime
 									)
-										
-						--INNER JOIN	dv.HubSecurities	hs
-						--ON			lp.HKeySecurity				=	hs.HKeySecurity
-
+						
 						INNER JOIN	dv.SatSecurities	ss
 						ON			lp.HKeySecurity			=		ss.HKeySecurity			-- TBD:		SLOW!!!
-						--AND			ss.Meta_LoadEndDateTime		=	N'9999-12-31'
-						--AND			(
-						--				@AsOfDateTime				BETWEEN	ss.Meta_LoadDateTime	
-						--											AND		ss.Meta_LoadEndDateTime
-						--			)
 						AND			ss.Meta_LoadEndDateTime	=	
 									(
 										SELECT	MAX( Meta_LoadEndDateTime )

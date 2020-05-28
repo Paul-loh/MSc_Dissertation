@@ -9,7 +9,8 @@ CREATE NONCLUSTERED INDEX [NIX_RefPriceSources] ON [ref].[RefPriceSources]
 (
 	[RecordPriority] ASC,
 	[PriSrcPriority] ASC	
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) 
+INCLUDE ( [Meta_LoadDateTime],	[Meta_LoadEndDateTime], [PrimaryType], [PriceSource], [RecordPriority],	[PriSrcPriority] )
 GO
 
 
@@ -17,11 +18,12 @@ CREATE NONCLUSTERED INDEX [NIX_RefPriceSources_MetaLoadDT_MetaLoadEndDT] ON [ref
 (
 	[Meta_LoadDateTime] ASC,
 	[Meta_LoadEndDateTime] ASC,
+	[PrimaryType] ASC,
 	[PriceSource] ASC,
 	[RecordPriority] ASC,
 	[PriSrcPriority] ASC
 )
-INCLUDE([PrimaryType],[PriceCcy],[Residence]) WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF) ON [PRIMARY]
+INCLUDE([PriceCcy],[Residence]) WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF) ON [PRIMARY]
 GO
 
 
@@ -34,23 +36,66 @@ CREATE NONCLUSTERED INDEX [NIX_SatSecurities_MetaLoadDT_MetaLoadEndDT] ON [dv].[
 ) 
 GO
 
-CREATE UNIQUE CLUSTERED INDEX [CIX_SatSecurities_MetaLoadDT_MetaLoadEndDT] ON [dv].[SatSecurities]
+CREATE UNIQUE CLUSTERED INDEX [CIX_SatSecurities_MetaLoadDT_MetaLoadEndDT_HKey] ON [dv].[SatSecurities]
 (
-	[HKeySecurity] ASC,
 	[Meta_LoadDateTime] ASC,
-	[Meta_LoadEndDateTime] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+	[Meta_LoadEndDateTime] ASC,
+	[HKeySecurity] ASC
+
+)
+GO
+
+CREATE NONCLUSTERED INDEX [NIX_SatSecurities_MetaLoadDT_MetaLoadEndDT_HKey] ON [dv].[SatSecurities]
+(
+	[Meta_LoadDateTime] ASC,
+	[Meta_LoadEndDateTime] ASC,
+	[HKeySecurity] ASC
+) 
+INCLUDE 
+(
+	[SecID],
+	[PrimaryType],
+	[SecondaryType],
+	[PriceCcyISO],
+	[ResidenceCtry],
+	[Multiplier]
+)	
+GO
+
+
+
+-- CURRENCIES 
+CREATE UNIQUE CLUSTERED INDEX [CIX_SatCurrencies_MetaLoadDT_MetaLoadEndDT] ON [dv].[SatCurrencies]
+(
+	[Meta_LoadDateTime] ASC,
+	[Meta_LoadEndDateTime] ASC,
+	[HKeyCurrency] ASC,
+	[SSCCode] ASC,
+	[CurrencyGroup] ASC
+)
 GO
 
 
 -- TRANSACTIONS 
-sour
+ALTER TABLE [dv].[LinkTransactions] ADD CONSTRAINT [CIX_LinkTransactions] UNIQUE CLUSTERED 
+(
+	[HKeyTransaction] ASC,
+	[HKeyPortfolio] ASC,
+	[HKeySecurity] ASC,
+	[HKeyBroker] ASC,
+	[HKeyPriceCcyISO] ASC,
+	[HKeySettleCcyISO] ASC,
+	[TRANNUM] ASC
+)
+GO
+
 CREATE NONCLUSTERED INDEX [NIX_SatTransactions_MetaLoadDT_MetaLoadEndDT] ON [dv].[SatTransactions] 
 (
 	[Meta_LoadDateTime]		ASC,
 	[Meta_LoadEndDateTime]	ASC
 ) 
 GO
+
 
 CREATE NONCLUSTERED INDEX [NIX_SatTransactions_Filtered_MetaLoadEndDT_Status] ON [dv].[SatTransactions]
 (	
@@ -84,6 +129,17 @@ CREATE NONCLUSTERED INDEX [NIX_SatTransactions_HKeyTransaction]  ON [dv].[SatTra
 )WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF) ON [PRIMARY]
 GO
 
+CREATE CLUSTERED INDEX [CIX_SatTransactions_MetaLoadDT_MetaLoadEndDT_HKey] ON [dv].[SatTransactions]
+(
+	[Meta_LoadDateTime] ASC,
+	[Meta_LoadEndDateTime] ASC,
+	[HKeyTransaction] ASC
+)
+GO
+
+
+
+
 --	PRICES
 CREATE NONCLUSTERED INDEX [NIX_LinkPrices_HKeySecurity_PriceType_PriceDate] ON [dv].[LinkPrices] 
 (
@@ -111,6 +167,17 @@ GO
 
 
 --	FX RATES
+
+CREATE NONCLUSTERED INDEX [NIX_LinkFXRates_HKeyFXRate_HKeyCurrency] ON [dv].[LinkFXRates]
+(
+	[HKeyFXRate] ASC,
+	[HKeyCurrency] ASC,
+	[CurrencyCode] ASC,
+	[RateDate] ASC
+)
+GO
+
+
 CREATE NONCLUSTERED INDEX [NIX_SatFXRates_MetaLoadDT_MetaLoadEndDT] ON [dv].[SatFXRates] 
 (
 	[Meta_LoadDateTime]		ASC,
@@ -119,11 +186,66 @@ CREATE NONCLUSTERED INDEX [NIX_SatFXRates_MetaLoadDT_MetaLoadEndDT] ON [dv].[Sat
 GO
 
 CREATE CLUSTERED INDEX [CIX_SatFXRates_HKeyFXRate_MetaLoadDT_MetaLoadEndDT] ON [dv].[SatFXRates]
-(
-	[HKeyFXRate] ASC,
+(	
 	[Meta_LoadDateTime] ASC,
-	[Meta_LoadEndDateTime] ASC
+	[Meta_LoadEndDateTime] ASC,
+	[HKeyFXRate] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+
+
+--	CALENDAR
+
+
+/****** Object:  Index [NIX_RefPriceSources]    Script Date: 28/05/2020 20:12:21 ******/
+CREATE NONCLUSTERED INDEX [NIX_RefCalendar] ON [ref].[RefCalendar]
+(
+	[Meta_LoadDateTime] ASC,
+	[Meta_LoadEndDateTime] ASC,
+	[CalendarDate] ASC
+)
+INCLUDE (
+			DateKey,
+			[Day],
+			[Month],
+			[Year],
+			[Quarter], 
+			[DayOfWeek],
+			DayOfQuarter,
+			[DayOfYear],
+			WeekNumISO,
+			MonthOfQuarter,
+			StartOfMonth,
+			EndOfMonth,
+			StartOfQuarter, 
+			EndOfQuarter,
+			StartOfCalYear,
+			EndOfCalYear,
+			StartOfFinYear
+			,[d]
+			,[dd]
+			,[ddd]
+			,[dddd]
+			,[m]
+			,[mm]
+			,[mmm]
+			,[mmmm]
+			,[q]
+			,[qqqq]
+			,[yyyy] 
+			,[yy]
+			,[FY_m]
+			,[FY_mm]
+			,[FY_q]
+			,[FY_qqqq]
+			,[FY_yy]
+			,[FY_yyyy]			 
+			,[IsWeekDay]
+			,[IsHolidayUK]
+			,[HolidayUK]
+)
+
 GO
 
 

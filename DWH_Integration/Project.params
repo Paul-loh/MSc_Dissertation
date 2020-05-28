@@ -416,7 +416,7 @@
         SSIS:Name="Sensitive">1</SSIS:Property>
       <SSIS:Property
         SSIS:Name="Value"
-        SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYOU+UZGcl0+Ztd5+v9eJkQAAAAACAAAAAAAQZgAAAAEAACAAAACpbY5jKSsZpOCfTDITj4Gp73SCtFbBo7VNf2jkigzIegAAAAAOgAAAAAIAACAAAAAgsl+ZNjhjFp49dzOKdk7XPVGt5TDs3AilKiSr/AINX5AAAADj5eQriumE+k6mEtVnfDZF9dmRWPqwSF4lTMKXKClJydTh5jyx8LGcMl4c9Epfy20ieCGtB+VQh4iHPY9bENPKWabIjl00/CLPJG9l/1VrZ210n9i9XavkvAE+LZtXfKJ0+5gS66PGnLha2t09hh+V0IM2G9CU5bzUVeYJH3b5294MrS3rX4YM6nnoB7p5wpJAAAAASuVHSrVUvkc5ZLWxznDv1XzUTSOZwcaD6zK9FwPw/8iSvfS0vK3yw9htz7qvi6KTez6tl5wjWPRxBJH1pMX6Aw==</SSIS:Property>
+        SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYOU+UZGcl0+Ztd5+v9eJkQAAAAACAAAAAAAQZgAAAAEAACAAAACl1BZ8uUyIWyMJOa8Wko1F3u+Uh+Y9zU3E+p8n4JvOpQAAAAAOgAAAAAIAACAAAADPkD71sTB2FtCtK9LNcYEkLH3rAE29SoUAzmuy9x/b+JAAAACYkKRSXxybapjt2zAxmvaEBYHW4eRgU1ZCOa7sjFxBRUbwS+XQFt6bV23fKMU1Ldf0rt/+jrcPM65AanGrMWuQM9azAoWD6kIoQr3eBPAkcjurPENlxYYLRuwAOrGd/ijaZcR2gf5T569hv0gxsGLRTu12voE8P06F7687N+6TaT0csNQR8kuPvFXxZ1hsaPVAAAAAv9nRLV5RLtrMwnAZygh9mlpW082z/VMmHRocCOdFfdIArlG7G0x28HG2+ZoohOUVAYdQIcng+1hyxUXHEZsgCg==</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -710,7 +710,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">D:\systems\Integration\Dev\Archive\HSBCNET\</SSIS:Property>
+        SSIS:Name="Value">D:\systems\Integration\Dev\Archive\HSBC\</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -773,7 +773,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">D:\Systems\Integration\Dev\InputFiles\HSBCNet\PositionStatement\DWH\</SSIS:Property>
+        SSIS:Name="Value">D:\Systems\Integration\Dev\InputFiles\HSBC\DWH\</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>

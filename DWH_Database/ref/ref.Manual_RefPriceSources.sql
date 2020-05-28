@@ -13,12 +13,13 @@
 	[PriSrcPriority]					INT NULL,
 	[PriceSource]						NVARCHAR(3) NULL,	
 	CONSTRAINT [UIX_refPriceSources]	UNIQUE CLUSTERED	(
-																[PrimaryType]		ASC,
-																[PriceCcy]			ASC,
-																[Residence]			ASC,
-																[PriceSource]		ASC,
-																[RecordPriority]	ASC,
-																[PriSrcPriority]	ASC,
-																[Meta_LoadDateTime] ASC
+																[Meta_LoadDateTime] ASC,	
+																[Meta_LoadEndDateTime] ASC,	
+																[PrimaryType] ASC,
+																[PriceCcy] ASC,
+																[Residence] ASC,
+																[PriceSource] ASC,
+																[RecordPriority] ASC,
+																[PriSrcPriority] ASC
 															)    
 )

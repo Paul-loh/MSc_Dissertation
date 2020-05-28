@@ -39,17 +39,9 @@ AS
 													)
 									) AS NCHAR(10) 
 						)												AS DimCurrencyID
-				, b.RateDate
-				
-				--, b.HKeyFXRate 	
-				--, b.HKeyCurrency	
-				
+				, b.RateDate				
 				, LEFT( TRIM( b.CurrencyCode ), 3) 						AS CurrencyCode
 				, b.RateToGBP					
-
-				--, b.Meta_Currency_RecordSource
-				--, b.Meta_Currency_LoadDateTime
-				-- , b.Meta_FXRate_RecordSource
 				, CAST( b.Meta_FXRate_LoadDateTime	AS SMALLDATETIME)	AS Meta_FXRate_LoadDateTime	
 				
 		FROM	
@@ -78,11 +70,6 @@ AS
 
 							INNER JOIN	dv.SatTransactions			st
 							ON			lt.HKeyTransaction			=		st.HKeyTransaction
-							-- AND			@AsOfDateTime				<=		st.Meta_LoadEndDateTime
-							--AND			(
-							--				@AsOfDateTime				BETWEEN	st.Meta_LoadDateTime	
-							--											AND		st.Meta_LoadEndDateTime
-							--			)
 							AND		st.Meta_LoadEndDateTime	=	
 														(
 															SELECT	MAX( Meta_LoadEndDateTime )
@@ -94,13 +81,6 @@ AS
 
 							INNER JOIN	dv.SatSecurities	ss
 							ON			lt.HKeySecurity				=		ss.HKeySecurity
-
-							-- AND			@AsOfDateTime				<=		ss.Meta_LoadEndDateTime
-							-- AND			(
-							--				@AsOfDateTime				BETWEEN	ss.Meta_LoadDateTime	
-							--											AND		ss.Meta_LoadEndDateTime
-							--			)
-
 							AND		ss.Meta_LoadEndDateTime	=	
 												(
 													SELECT	MAX( Meta_LoadEndDateTime )
@@ -150,13 +130,7 @@ AS
 						FROM			dv.LinkFXRates		lfx
 							
 						INNER JOIN		dv.SatFXRates		sfx
-						ON				lfx.HKeyFXRate					=	sfx.HKeyFXRate
-
-						--AND				@AsOfDateTime					<=	sfx.Meta_LoadEndDateTime
-						--AND				(
-						--					@AsOfDateTime				BETWEEN	sfx.Meta_LoadDateTime	
-						--												AND		sfx.Meta_LoadEndDateTime
-						--				)						
+						ON				lfx.HKeyFXRate					=	sfx.HKeyFXRate					
 						AND				sfx.Meta_LoadEndDateTime	=	
 																(
 																	SELECT	MAX( Meta_LoadEndDateTime )
@@ -171,11 +145,6 @@ AS
 		
 						INNER JOIN		dv.SatCurrencies	sc
 						ON				hc.HKeyCurrency					=	sc.HKeyCurrency
-						-- AND				@AsOfDateTime					<=	sc.Meta_LoadEndDateTime
-						--AND				(
-						--					@AsOfDateTime				BETWEEN	sc.Meta_LoadDateTime	
-						--												AND		sc.Meta_LoadEndDateTime
-						--				)							
 						AND		sc.Meta_LoadEndDateTime	=	
 												(
 													SELECT	MAX( Meta_LoadEndDateTime )
@@ -191,11 +160,6 @@ AS
 																	FROM			dv.LinkFXRates	lfx2														
 																	INNER JOIN		dv.SatFXRates	sfx2	
 																	ON				lfx2.HKeyFXRate			=		sfx2.HKeyFXRate
-																	--AND				@AsOfDateTime					<=	dv.SatFXRates.Meta_LoadEndDateTime																	
-																	--AND				(
-																	--					@AsOfDateTime				BETWEEN	dv.SatFXRates.Meta_LoadDateTime	
-																	--												AND		dv.SatFXRates.Meta_LoadEndDateTime
-																	--				)																			
 																	AND				sfx2.Meta_LoadEndDateTime	=	
 																					(
 																						SELECT	MAX( Meta_LoadEndDateTime )
@@ -208,7 +172,6 @@ AS
 																	WHERE		lfx2.RateDate				<=	c.AsAtDate 																																																									
 																	AND			lfx2.HKeyCurrency			=	c.HKeyPriceCcyISO																
 																)						
-						-- ORDER BY		lfx.RateDate DESC
 					) b
 
 		-- TBD: Not sure why we get NULL but filter out for now 
