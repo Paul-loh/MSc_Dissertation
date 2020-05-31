@@ -94,29 +94,67 @@ AS
 		--	Retrieve correct satellite attributes where Load DateTime of link between satellite LoadDateTime and LoadEndDateTime		
 		INNER JOIN		dv.SatCustodianPositions	scp
 		ON				lcp.HKeyCustodianPosition			=	scp.HKeyCustodianPosition
-		AND				lcp.Meta_LoadDateTime				BETWEEN scp.Meta_LoadDateTime AND scp.Meta_LoadEndDateTime
-
+		--	AND				lcp.Meta_LoadDateTime				BETWEEN scp.Meta_LoadDateTime AND scp.Meta_LoadEndDateTime
+		AND				scp.Meta_LoadDateTime				=
+																(
+																	SELECT	MAX ( Meta_LoadDateTime ) 
+																	FROM	dv.SatCustodianPositions
+																	WHERE	@AsOfDateTime	BETWEEN		Meta_LoadDateTime	
+																							AND			Meta_LoadEndDateTime	
+																	AND		HKeyCustodianPosition	=	lcp.HKeyCustodianPosition																	
+																)	
 
 		INNER JOIN		dv.SatCustodianSecurities	scs
 		ON				lcp.HKeyCustodianSecurity			=	scs.HKeyCustodianSecurity
-		AND				lcp.Meta_LoadDateTime				BETWEEN scs.Meta_LoadDateTime AND scs.Meta_LoadEndDateTime
-		
+		-- AND				lcp.Meta_LoadDateTime				BETWEEN scs.Meta_LoadDateTime AND scs.Meta_LoadEndDateTime
+		AND				scs.Meta_LoadDateTime				=
+																(
+																	SELECT	MAX ( Meta_LoadDateTime ) 
+																	FROM	dv.SatCustodianSecurities
+																	WHERE	@AsOfDateTime	BETWEEN		Meta_LoadDateTime	
+																							AND			Meta_LoadEndDateTime	
+																	AND		HKeyCustodianSecurity	=	lcp.HKeyCustodianSecurity																	
+																)		
 
 		INNER JOIN		dv.SatCustodianAccounts		sca
 		ON				lcp.HKeyCustodianAccount			=	sca.HKeyCustodianAccount
-		AND				lcp.Meta_LoadDateTime				BETWEEN sca.Meta_LoadDateTime AND sca.Meta_LoadEndDateTime
-
+		--AND				lcp.Meta_LoadDateTime				BETWEEN sca.Meta_LoadDateTime AND sca.Meta_LoadEndDateTime
+		AND				sca.Meta_LoadDateTime				=
+																(
+																	SELECT	MAX ( Meta_LoadDateTime ) 
+																	FROM	dv.SatCustodianAccounts
+																	WHERE	@AsOfDateTime	BETWEEN		Meta_LoadDateTime	
+																							AND			Meta_LoadEndDateTime																		
+																	AND		HKeyCustodianAccount	=	lcp.HKeyCustodianAccount
+																)
 
 		--	TBD: Currency definition from Pacer ? 
 		LEFT JOIN		dv.SatCurrencies			sc
 		ON				lcp.HKeyPriceCurrency				=	sc.HKeyCurrency
-		AND				lcp.Meta_LoadDateTime				BETWEEN sc.Meta_LoadDateTime AND sc.Meta_LoadEndDateTime
-
+		-- AND				lcp.Meta_LoadDateTime				BETWEEN sc.Meta_LoadDateTime AND sc.Meta_LoadEndDateTime
+		AND				sc.Meta_LoadDateTime				=	
+																(
+																	SELECT	MAX ( Meta_LoadDateTime ) 
+																	FROM	dv.SatCurrencies
+																	WHERE	@AsOfDateTime	BETWEEN		Meta_LoadDateTime	
+																							AND			Meta_LoadEndDateTime	
+																	AND		HKeyPriceCurrency		=	sc.HKeyCurrency
+																)
 
 		LEFT JOIN		ref.RefSecurityIdentifierMappings	rsm
-		ON				rsm.PartnerSystemCode001			=	N'HSBCNET'
+		ON				rsm.PartnerSystemCode001			=	N'HSBCNET' 
 		AND				rsm.PartnerSystemSecurityCode001	=	lcp.ISIN
-		AND				lcp.Meta_LoadDateTime				BETWEEN rsm.Meta_LoadDateTime AND rsm.Meta_LoadEndDateTime
+		AND				rsm.Meta_LoadDateTime				=	
+																(
+																	SELECT	MAX ( Meta_LoadDateTime ) 
+																	FROM	ref.RefSecurityIdentifierMappings
+																	WHERE	@AsOfDateTime	BETWEEN		Meta_LoadDateTime	
+																							AND			Meta_LoadEndDateTime
+																	AND		PartnerSystemCode001			=	N'HSBCNET' 
+																	AND		PartnerSystemSecurityCode001	=	lcp.ISIN
+																)
+			
+		--	AND				lcp.Meta_LoadDateTime				BETWEEN rsm.Meta_LoadDateTime AND rsm.Meta_LoadEndDateTime
 		
 
 		--  TBD: Take only last loaded summarised data for each Report Date ?

@@ -81,6 +81,7 @@ AS
 						) 															AS DimCustodianSecurityID							
 
 					, hcs.ISIN  														
+					, ss.IssuerName
 					, scs.Meta_LoadDateTime											AS	Meta_ISIN_LoadDateTime
 
 					,CAST( rsm.Meta_LoadDateTime AS SMALLDATETIME)					AS Meta_Mapping_LoadDateTime
